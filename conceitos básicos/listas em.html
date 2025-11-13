@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+<body>
+    <h1>Trabalhando com listas:</h1>
+
+    <h2>Listas ordenadas:</h2>
+
+    <h3>Sem parâmetro, padrão:</h3>
+
+    <ol><!--Lista ordenada-->
+        <li>Acordar</li><!--Cada item dentro de uma ol fica em uma li(list item)-->
+        <li>Estudar</li>
+        <li>Treinar</li><!--Na atual versão do html a tag de fechamento das li se tornou opcional.-->
+        <li>Escovar os dentes
+        <li>Dormir
+        
+    </ol>
+
+    <h3>Com parâmetros:</h3>
+
+    <h4>Paramêtro númerico, começando do 5:</h4>
+
+    <ol type="1" start="5">
+        <li>Acordar</li>
+        <li>Estudar</li>
+        <li>Treinar</li>
+        <li>Escovar os dentes
+        <li>Dormir
+        
+    </ol><!--O parâmetro type indentifica se a lista será numerica(digitando 1) ou letra maiúsucla ou minúscula(digitando uma letra A ou a) ou letras romanas(digitando um I ou i), já o start define de qual letra ou número a lista começará, por padrão, a lista é númerica e começa do 1(no start sempre se define por numeração).(OBS: se caso você digitar uma letra ou número diferentes dos especificados no type ele buga e fica númerico.)-->
+
+    <h4>Paramêtro alfabético maiúsculo, começando do B:</h4>
+
+    <ol type="A" start="2">
+        <li>Acordar</li>
+        <li>Estudar</li>
+        <li>Treinar</li>
+        <li>Escovar os dentes
+        <li>Dormir
+    </ol>
+
+    <h4>Paramêtro alfabético minúsculo, começando do d:</h4>
+
+    <ol type="a" start="4">
+        <li>Acordar</li>
+        <li>Estudar</li>
+        <li>Treinar</li>
+        <li>Escovar os dentes
+        <li>Dormir
+    </ol>
+
+    <h4>Paramêtro algarismo romano minúsculo, começando do 1:</h4>
+
+    <ol type="i" start="1">
+        <li>Acordar</li>
+        <li>Estudar</li>
+        <li>Treinar</li>
+        <li>Escovar os dentes
+        <li>Dormir
+    </ol>
+
+    <h4>Paramêtro algarismo romano maiúsculo, começando do 1:</h4>
+
+    <ol type="I" start="1">
+        <li>Acordar</li>
+        <li>Estudar</li>
+        <li>Treinar</li>
+        <li>Escovar os dentes
+        <li>Dormir
+    </ol>
+
+    <h2>Listas não ordenadas:</h2>
+
+    <h3>Sem parâmetros, padrão:</h3>
+
+    <ul>
+        <li>Acordar</li>
+        <li>Estudar</li>
+        <li>Treinar</li>
+        <li>Escovar os dentes
+        <li>Dormir
+    </ul>
+
+    <h3>Com parâmetros:</h3>
+
+    <h4>Disc, padrão:</h4>
+
+    <ul type="disc">
+        <li>Acordar</li>
+        <li>Estudar</li>
+        <li>Treinar</li>
+        <li>Escovar os dentes
+        <li>Dormir
+    </ul>
+
+    <h4>Circle:</h4>
+
+    <ul type="circle">
+        <li>Acordar</li>
+        <li>Estudar</li>
+        <li>Treinar</li>
+        <li>Escovar os dentes
+        <li>Dormir
+    </ul>
+
+    <h4>Square:</h4>
+
+    <ul type="square">
+        <li>Acordar</li>
+        <li>Estudar</li>
+        <li>Treinar</li>
+        <li>Escovar os dentes
+        <li>Dormir
+    </ul>
+
+    <h2>Juntando os dois tipos:</h2>
+
+    <ol>
+        <li>Linguagens baseadas em C:</li>
+
+            <ul>
+                <li>c++;</li>
+                <li>Java;</li>
+                <li>c#;</li>
+                <li>JavaScript;</li>
+            </ul>
+        
+        <li>Linguagens não baseadas em C:</li>
+
+            <ul>
+                <li>Python;</li>
+                <li>Ruby;</li>
+                <li>Haskell;</li>
+                <li>Prolog;</li>
+            </ul>
+
+    </ol>
+
+    <h2>Lista de definições:</h2>
+
+    <dl><!--Definition list, é como um dicionario:-->
+        <dt>HTML</dt><!--O termo-->
+        <dd>Linguagem de marcação para ciração de sites.</dd><!--Descrição-->
+
+        <dt>CSS</dt>
+        <dd>Linguagem de marcação para estilização de sites.</dd>
+    </dl><!--Uma curiosidade, o navegador indentifica e dá valor para sites que possuem uma dt, se alguém pesquisar a definição de um termo presente na nossa dt o navegador pode achar e mostrar ao usuário.-->
+    
+</body>
+</html>

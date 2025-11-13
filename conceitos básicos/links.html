@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+</head>
+<body>
+    <h1>Usando lnks externos</h1>
+    <p>
+        Você pode acessar o meu <a href="https://github.com/JOHNOVERDADEIROEUNICO/html-css" target="_blank" rel="external">repositório do GitHub</a>
+    </p><!--a é a tag onde colocamos links, esse a significa âncora, o parâmetro href é onde estará o endereço do link.
+    
+    O parâmetro target define onde o link será aberto quando o usário clicar nele.
+        1. _self: Padrão. Abre o link na mesma aba/janela;
+        
+        2. _blank: Abre o link em uma nova janela;
+        
+        3. _parent: Abre o link no quadro pai (usado em páginas com frames);
+        
+        4. _top: Abre o link na janela inteira, removendo qualquer frame.
+        
+        5. nomePersonalizado: Abre o link em uma janela ou frame nomeado-útil para reutilizar a mesma aba para vários links.
+        
+    Já o parâmetro rel inidica a relação entre a página atual e o link de destino.
+        1. noopener: Evita que a nova página (quando target for blank) tenha acesso à pàgina que a abriu-aumentando a segurança;
+
+        2. noreferrer: impede o envio de informações sobre a página de origem (referenciador) ao site de destino. Também bloqueia o acesso ao objeto windo.opener;
+
+        3. nofollow: Diz aos mecanismos de busca para não seguir o link(útill em links pagos ou comentários);
+
+        4. ugc: (User Generated Content) indica que o link foi criado por um usuário, como em comentários ou fóruns;
+
+        5. sponsored: Indica que o link é patrocinado ou pago;
+
+        6. alternative: Indica que o link é uma versão alternativa da página (ex: outro idioma);
+
+        7. stylesheet: Define que o link é uma folha de estilo (Mais usado com a tag <link>)
+
+        8. prev/next: Indica a página anterior ou seguinte em uma sequência (útil em navegação de artigos);
+
+        9. external: Indica que o link leva para um site externo, ou seja, fora do domínio atual;
+    -->
+
+    <p>Você também pode <a href="https://www.youtube.com/watch?v=LYU-8IFcDPw" target="_blank" rel="external noreferrer">ouvir uma música boa</a> caso queira.</p><!--É possível passar mais de um  valor no rel!-->
+</body>
+</html>
