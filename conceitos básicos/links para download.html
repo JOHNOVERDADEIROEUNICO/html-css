@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links Download</title>
+</head>
+<body>
+    <h1>Baixando arquivos:</h1><!--Para criar links para baixar arquivos em HTML, você usa a tag <a> normalmente, mas com o atributo download, que indica ao navegador que o link deve baixar o arquivo em vez de apenas abrir.
+        
+    Obs: 
+    1. O arquivo precisa estar acessível: Ou seja, no servidor / pasta do seu projeto.
+    
+    2. Alguns arquivos podem abrir no navegador: Arquivos como PDF e imagens podem abrir no navegador dependendo das configurações do usuário.
+    O atributo download ajuda, mas não garante 100% quando o arquivo vem de outro domínio.
+    
+    3. download não funciona para links externos de certos sites: Por exemplo, o Google Drive e Dropbox às vezes bloqueiam o download.-->
+
+    <ul>
+        <li>
+            <a href="pasta para download/pexels-pixabay-206585.jpg" download="minha-foto.png">Baixar a foto</a><!--Dentro de download estamos passando o nome que o arquivo terá quando for baixado.-->     
+        </li>
+        <li>
+            <a href="pasta para download/pexels-pixabay-206585.zip.zip" download="minha-foto.zip" type="application/zip">Baixar a foto em zip</a><!--Perceba que no parâmetro type temos um application/zip, vamos ver o que significa:
+            
+            application faz parte do MIME type (ou media type), que indica ao navegador qual é o tipo de conteúdo de um arquivo.
+            
+            O tipo application é usado para indicar arquivos que não são mídia (imagem, áudio ou vídeo), mas sim:
+            
+            1. Documentos digitais;
+            2. Dados;
+            3. Executáveis;
+            4. Formatos de arquivos diversos;
+            5. Binários;
+            
+            Ou seja o application diz ao navegaddor: “Isso é um arquivo que deve ser tratado como um aplicativo, documento ou dado.”
+            
+            Tipos de application:
+            
+            1. application/pdf;
+            2. application/json;
+            3. application/xml;
+            4. application/zip;
+            5. application/msword;
+            6. application/vnd.openxmlformats-officedocument.wordprocessingml.document;
+            7. application/octet-stream;
+            8. application/x-www-form-urlencoded
+            9. application/octet-stream(Arquivo binário genérico)
+            
+            e por aí vai....-->
+        </li>
+    </ul>
+</body>
+</html>

@@ -6,7 +6,7 @@
     <title>Links</title>
 </head>
 <body>
-    <h1>Usando lnks externos</h1>
+    <h1>Usando lnks externos:</h1><!--Link que leva para um site diferente, ou seja de um servidor diferente, fora do domínio atual.-->
     <p>
         Você pode acessar o meu <a href="https://github.com/JOHNOVERDADEIROEUNICO/html-css" target="_blank" rel="external">repositório do GitHub</a>
     </p><!--a é a tag onde colocamos links, esse a significa âncora, o parâmetro href é onde estará o endereço do link.
@@ -43,5 +43,20 @@
     -->
 
     <p>Você também pode <a href="https://www.youtube.com/watch?v=LYU-8IFcDPw" target="_blank" rel="external noreferrer">ouvir uma música boa</a> caso queira.</p><!--É possível passar mais de um  valor no rel!-->
+
+    <h2>Usando links internos:</h2><!--Links que levam para uma página dentro do próprio site ou até mesmo para uma parte da mesma página. Ou seja páginas html que estejam em um mesmo sevidor.-->
+
+    <!--Para criar links internos, precisamos de mais de uma página para poder redirecionar segue links part2.html-->
+
+    <p>
+        Está é a minha primeira página, se quiser você pode acessar também a minha <a href="pasta linkPart2/links part2.html" target="_blank" rel="next">segunda página</a>
+    </p><!--Em quase todos os casos não se faz a necessidade de um rel em um link interno, pois os valores do rel em sua maioria são para segurança de sites externos, SEO para links não confiáveis, marcar links pagos ou gerados por usuários, controlar comportamento de abas externa e por aí vai...
+    
+    As excessões a regra são:
+    1. Navegação sequncial: Se você está fazendo artigos com "próximo" e "anterios" vale um next/prev;
+    
+    2. Versão alternativa da mesma página: Idiomas diferentes, vale um alternative;
+    
+    3. Taxonomias ou marcações: Em muitos sistemas modernos, as taxonomias e as marcações são usadas em conjunto para oferecer o melhor dos dois mundos: uma estrutura sólida para a organização central e a flexibilidade das marcações para a navegação personalizada e a descoberta de conteúdo. Vale um tag;-->
 </body>
 </html>
