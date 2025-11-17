@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difrentes Mídias</title>
+</head>
+<body>
+    <h1>Imagem dinámica:</h1>
+
+    <p>
+        Perceba que ao abrir em diferentes dispositivos ou diminuindo e aumnetando a tela do navegador a imagem muda de tamanho:
+    </p>
+
+    <picture>
+        <source 
+            media="(max-width: 700px)" srcset="img-dinamico/Pequeno.png" 
+            type="image/png"
+        >
+
+        <source 
+            media="(max-width: 1000px)"     srcset="img-dinamico/Medio.png"    
+            type="image/png"
+        >
+
+        <img 
+            src="img-dinamico/Grande.png" alt="Imagem de diferentes tamanhos"
+        >
+    </picture><!--A tag <picture> em HTML serve para exibir imagens responsivas, permitindo que o navegador escolha automaticamente qual imagem carregar dependendo do tamanho da tela, resolução, formato suportado ou outras condições.
+    
+    Ou seja, ela serve para:
+       1. Trocar a imagem automaticamente com base no tamanho da tela (muito útil para mobile).;
+
+       2. Carregar formatos diferentes de imagem (ex: WebP, PNG, JPG) dependendo do suporte do navegador.;
+
+        3. Oferecer imagens mais leves para dispositivos móveis.;
+
+        4. Controlar estilos específicos para diferentes mídias (por exemplo: telas retina, telas grandes, impressoras).;-->
+
+    <!--Dentro da tag picture se utiliza a tag source que é usada dentro das tags <picture>, <audio> e <video>, mas como estamos falando de imagens, vou focar no uso dentro de <picture>.
+    
+    Ela serve para informar ao navegador alternativas de imagem, dizendo quando ou como cada imagem deve ser usada.
+
+    Obs: a ordem de execução de cada source se dá debaixo pra cima!;
+    
+    Ou seja, ela faz as seguintes funções:
+        1. Define versões diferentes da mesma imagem;
+
+        2. Adiciona condições para quando cada imagem deve ser escolhida;
+
+        3. Permite indicar formatos diferentes (WebP, JPEG, AVIF…);
+
+        4. Controla qual imagem será exibida para dispositivos distintos (mobile/desktop);
+
+        5. Ou seja, ela funciona como uma regra dizendo ao navegador:
+
+        “Use esta imagem se esta condição for verdadeira.”;
+        
+    Agora seus atributos:
+        1. srcset (imagem a ser usada): Indica o arquivo da imagem.;
+        
+        2. type (formato da imagem): Permite especificar o tipo de arquivo.;
+        
+        3. media (condição baseada em tamanho da tela): Funciona como uma media query do CSS dentro do HTML.
+
+        4. sizes: O atributo sizes trabalha junto com srcset e é um dos recursos mais avançados para imagens responsivas.
+        Ele informa ao navegador o tamanho que a imagem terá na tela, permitindo que ele escolha qual resolução deve ser carregada.
+
+        Pense assim:
+
+        srcset diz: "Tenho várias versões dessa imagem."
+        sizes diz: "Aqui está o tamanho que a imagem vai ocupar em diferentes larguras de tela. Escolha a versão ideal."
+                
+                Ou seja, define até que tamanho a imagem será usada
+    
+        Exemplo:
+            <img
+                src="foto-800.jpg"
+                srcset="
+                    foto-400.jpg 400w,
+                    foto-800.jpg 800w,
+                    foto-1200.jpg 1200w
+                "
+                sizes="
+                    (max-width: 600px) 100vw,
+                    (max-width: 900px) 50vw,
+                    33vw
+                "
+                alt="Imagem responsiva"
+            >
+            -->
+</body>
+</html>

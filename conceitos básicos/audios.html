@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áudios</title>
+</head>
+<body>
+    <h1>Reproduzindo audio:</h1>
+
+    <p>
+        Ouça o audio abaixo:
+    </p>
+
+    <audio 
+        src="audios/videoplayback.m4a" controls autoplay>
+    </audio><!--Ela permite embutir áudio no HTML e controlar sua reprodução usando atributos como play, pause, autoplay, loop, controls, entre outros.
+
+    Atributos importantes:
+        1. controls: Exibe os botões de controle.;
+
+        2. autoplay: Toca automaticamente ao carregar a página. OBS: mutios navegadores bloqueiam autoplay sem interação do usuário (nesse caso só funcionando ao recarregar a página)
+
+        3. muted: O som estará por padrão no mudo.;
+
+    Os formatos de áudios mais comuns são:
+        1. mp3;
+        2. ogg;
+        3. wav;
+    
+    Esta é a maneira básica, outra maneira é usando os sources:-->
+
+    <audio preload="metadata" controls loop><!--O parâmetro preload, define quando será carregado o audio.
+    
+    Os seus valores são:
+        1. auto: Ele irá carregar junto do site (não recomendável devido a possibilidade de pesar o site).;
+        
+        2. metadata: Irá carregar algumas informações como nome do arquivo, duração, etc junto do site.;
+        
+        3. none: não irá carregar enquanto o usuário não apertar play.;
+        
+        4. sem valor: Se você não colocar valor por padrão ele será auto.;
+        
+    Já o parâmetro loop faz ele repetir o audio após a reprodução.-->
+        <source 
+            src="audios/videoplayback.mpeg" 
+            type="audio/mpeg"><!--mpeg significa formato mp3, mpeg é espécifico do source, na tag audio se escreve mp3 mesmo.-->
+
+        <source 
+            src="audios/videoplayback.ogg" 
+            type="audio/ogg">
+        
+        <source 
+            src="audios/videoplayback.waV" 
+            type="audio/wav">
+            
+        <source 
+            src="audios/videoplayback.m4a" 
+            type="audio/mp4"><!--Obs: o source utiliza o nome mp4 para o m4a.-->
+        
+    </audio>
+</body>
+</html>
