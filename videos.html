@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos HTML</title>
+</head>
+<body>
+    <H1>
+        Inserindo video hoospedados localmente:
+    </H1>
+
+    <p>
+        Este video está hospedado no meu próprio servidor.
+    </p>
+
+    <!--Tive que usar essa imagem porque por algum motivo os servidores do canva e do pexels estavam fora do ar.-->
+    <video width="500" poster="img-dinamico/Pequeno.png"  controls>
+            <source src="videos/14682999_3840_2160_30fps.mp4" type="video/mp4"> 
+
+            <source src="videos/14682999_3840_2160_30fps.m4v" type="video/mp4"> 
+
+            <source src="videos/14682999_3840_2160_30fps.webm" type="video/webm"> 
+
+            <p>Seu navegador não tem compatibilidade com nenhum formato de video</p>
+    </video><!--Perceba que a tag video é bem semelhante a tag img, temos como colocar o src como parâmetro direto do video ou colocar dentro dos sources, o width aqui foi usado para ajustar tamanho devido ao video ter ficado enorme na tela.
+    
+    O parâmetro poster obviamente adiciona uma capa ao video.-->
+
+    <h1>Adicionando videos externos</h1><!--Vá no toutube escolha um vídeo e clique em compartilhar, selecione a opção incorporar e copie e cole o código aqui. Detalhe videos com direitos autorais não rodam.-->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/BP7EyOGnB20?si=1xcRl54LXp0S4Igz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><!--Este é o código usado no youtube para colocar um video.
+    
+    Além do youtube existe o vimeo que hospeda videos, tendo configurações de incorporação melhores.-->
+
+    <!--Vamos ver mais sobre a tag iframe:
+    
+    A tag <iframe> em HTML é usada para embutir outro conteúdo HTML dentro da sua página, como se fosse uma “janela” que mostra outro site, vídeo, mapa, documento ou qualquer página web independente.
+        
+    Sua estrutura básica se dá por:
+        <iframe src="pagina.html"></iframe>
+
+    O atributo src aponta para o conteúdo que será carregado dentro do iframe.
+    
+    Você usa iframes quando quer mostrar conteúdo externo ou conteúdo separado, por exemplo:
+
+        1. vídeos do YouTube;
+
+        2. mapas do Google Maps;
+
+        3. outra página do seu próprio site;
+
+        4. documentos (PDF, páginas, sistemas, etc.);
+        
+    O iframe possuí diversos parâmetros, vamos ver alguns deles:
+        1. src: Endereço da página exibida;
+
+        2. width e height: Definem tamanho de área;
+
+        3. frameborder (Obsoleto): Define o tamanho da borda, porém hoje se usa CSS (Pelo visto o youtube ainda usa);
+
+        4. allowfullscreen: Permite modo tela cheia (mais usado com videos);
+
+        5. allow: Dá permissões especiais, como câmera, microfone, autoplay etc...;
+
+        6. loading="lazy": Carrega o iframe apenas quando estiver visível (melhora perfomance);
+
+        7. sandbox: Restringe o conteúdo interno por segurança.
+        É um dos mais seguros hoje em
+        dia.
+            <iframe src="app.html" sandbox></iframe>
+        Ou com permissões específicas:
+            <iframe src="app.html" sandbox="allow-scripts allow-forms"></iframe>;
+        
+        8. referrerpolicy: controla quais informações do endereço da página atual (referer) serão enviadas para o site que está dentro do iframe (ou para qualquer recurso carregado, como imagens, scripts, links etc.).
+        
+        Ou seja, ele define se o site aberto no iframe vai saber de onde o usuário veio.
+        
+        O valor usado "strict-origin-when-cross-origin (valor moderno recomendado)" siginifica:
+            a. Mesma origem → envia URL completa;
+
+            b. Origem diferente → envia apenas o domínio;
+
+            c. HTTPS → HTTP → não envia nada;
+        
+    Cuidados importantes:
+
+    Muitos sites bloqueiam abertura dentro de iframes por segurança usando headers como X-Frame-Options: DENY.
+
+    Se o conteúdo for pesado, iframes podem deixar a página lenta.
+
+    Sempre use sandbox se você não confiar no conteúdo carregado.-->
+
+</body>
+</html>
