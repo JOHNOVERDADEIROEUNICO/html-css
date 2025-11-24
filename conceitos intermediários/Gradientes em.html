@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente em CSS</title>
+    <style>
+        
+        body{
+            /*A propriedade background-image no CSS serve para definir uma imagem como plano de fundo de um elemento HTML.
+            
+            Ou seja, ela diz ao navegador que aquele elemento deve exibir uma imagem ao fundo, atrás do conteúdo (texto, botões, etc.).
+            
+            Ela pode ser usada em qualquer elemento, body, div, header etc...
+            
+            Como vimos no exemplo acima podemos usar ela para fazzer degradês, porém, ela pode ser usada também para colocar imagens:
+                div {
+                        background-image: url("imagem.jpg");
+                    }
+            veremos melhor sobre seu uso mais a frente.
+
+            além de imagens temos:
+                1.Degradês:
+                    a.Linear Gradient (degradê linear), EX: 
+                    background-image: linear-gradient(to right, red, blue);
+                    
+                    b.Radial Gradient (degradê circular), EX: 
+                    background-image: radial-gradient(circle, yellow, green);
+                    
+                    c.Conic Gradient (degradê cônico), EX: 
+                    background-image: conic-gradient(red, blue, red);
+                
+                2.Misturar imagens com degradês:
+                    background-image: 
+                        url("estrela.png"),
+                        linear-gradient(to bottom, #000, #333);
+               
+                3.Gradientes com transparência:
+                    background-image: linear-gradient(rgba(0,0,0,0.5), transparent);
+                
+                4.Padrões criados só com CSS (sem imagens reais):
+                    background-image: repeating-linear-gradient(45deg, black 0, black 10px, white 10px, white 20px);*/
+
+            /*Perceba que é possível adicionar varios tons diferentes! Recomendação usar até 5 cores(o que já é raro)*/
+           
+            background-image: linear-gradient(to top, #FFF275, #FF8C42, #FF3C38, #662E9B, #43BCCD); 
+            
+            min-height: 100vh;/*vh significa viewport height( altura vísivel da janela)*/
+
+           /* background-attachment: fixed;*/
+             /*A propriedade background-attachment: fixed; em CSS controla como o plano de fundo se comporta em relação ao scroll da página.
+            
+            OBS: Em celulares e tablets alguns navegadores não o suportam, logo também não recomendável!.*/
+        }
+
+        /*Detalhe curioso, no linear-gradient temos left, right, bottom top e grau(deg), no top e no bottom ele "buga" cirando várias faixas de degradês em sequência, isso ocorre pelo tamanho máximo que a propriedade background-image consegue gerar, para resolver este problema existem 4 formas, uma é aumentar a altura em pixels(horrível) e a segunda(horrível) é aumentar a altura nas configurações globais para 100% e a terceira(ok, mas não a melhor devido a problemas de suporte em tablets e celulares) seria usar o background-attachment: fixed; assim temos o gradiente funcionando normalmente e a 4(melhor) usando min-height em 100vh e também um background-repeat: no-repeat; que evita que o fundo fique se repetindo, sim simples não?  */
+
+        /*Veremos melhor sobre o uso de imagens de fundo e outras configurações background que são usadas junto mais a frente. Agora se preocupe apenas com o degradê.*/
+
+    </style>
+</head>
+<body>
+    <h1>Testando Gradiente:</h1>
+</body>
+</html

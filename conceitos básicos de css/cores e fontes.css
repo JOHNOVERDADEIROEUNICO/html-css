@@ -14,6 +14,6 @@ h2{
 }
 
 p{
-    text-align: justify;
+    text-align: justify;/*Alinha o texto do inicio ao fim da página*/
     color: rgb(69, 68, 68);
 }/*Perceba que o CSS trabalha justamente com todo o estilo do código, cor, fonte, posição e etc....

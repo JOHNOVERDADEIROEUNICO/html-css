@@ -1,0 +1,35 @@
+@charset "UTF-8";/*Serve para que ele não tenha problema com a nossa lingua*/
+
+* {/*Configurações globais, ou seja, o que for colocado aqui valerá pra todo site.*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    text-align: justify;/*Alinha o texto do inicio ao fim da página*/
+}
+
+h1 {
+    color: #E85D75;
+    text-align: center;
+    text-shadow: 1px 1px 1px #e80027;/*Idêntico ao box-shadow descrito abaixo.*/
+}
+
+h2 {
+    color: #eb8e9d;
+}
+
+body{
+    background-image: linear-gradient(to top, #3A606E, #99E1D9);
+    background-repeat: no-repeat;/*Ambos já esplicado em gradientes.html*/
+    min-height: 100vh;
+}
+
+main{
+    background-color: #6D3D14;
+    width: 600px;
+    padding: 10px;
+    margin: auto;/*Ele se austa ao centro automaticamente independente do tamnho da tela.*/
+    border-radius: 10px;/*Faz a borda ficar em formato circular*/
+
+    box-shadow: 5px 15px 15px #3a606e86;/*Cria uma sombra em torno do elemnto, sendo o primeiro lado, baixo, espalhamento e cor.*/
+}
