@@ -6,13 +6,15 @@
     <title>Fontes em Css</title>
     <style>
         body{
-            font-family: Arial, Helvetica, sans-serif;/*Dentro das familias de fontes as mais usadas são: Arial, Verdana, Helvetica
+            /*font-family: Arial, Helvetica, sans-serif;*/
+            /*Dentro das familias de fontes as mais usadas são: Arial, Verdana, Helvetica
             
             Quando passamos mais de uma familia queremos dizer aos navegadores para tentar usar a primeira fonte(Arial), se não der, ele tenta a segunda(Helvetica) e se não der, ele tenta a terceira(sans-serif).
             
             Essa combinação é a mais famosa, porém existem outras, no site CSS web safe fonts você encontra mais combinações entre fontes de estilos diferentes do Arial.*/
 
-            font-size: 16 px;/*Além das familias de fonte é possível também definir o seu tamanho usando está propriedade
+            /*font-size: 16 px;*/
+            /*Além das familias de fonte é possível também definir o seu tamanho usando está propriedade
 
             Normalmente os navegadores vem em formato de 16px por padrão, a recomendação de uso é o px e o em(mais recomendado que px ainda pois trabalha com porcentagem de telas), 1 em = 16px
             
@@ -42,6 +44,27 @@
                     e.vh(view height, altura da tela);
                 
             As medidas absolutas podem apresentar problemas em diferentes telas, afinal a resolução muda*/
+
+           /* font-weight: normal;*/
+           /*Neste parâmetro nós adicionamos o nível de espessura (peso) da escrita, ou seja mais claro ou mais escuro.
+
+            Neste parâmetro temos 4 valores pré-definidos:
+                lighter, normal, bold e bolder.
+            Estas 4 são os valores possíveis, porém, dependendo da fonte algumas delas podem não ser aceitas
+            
+            Além destes podemos definir o nível de espessura em números também, podendo ir de 100 a 900*/
+
+           /* font-style: italic;*/
+           /*Define o estilo da escrita, lembrando que nem todas as fontes, assim como no font-weight aceitam todos os estilos, além disso o font-style é muito usado com o font-weight.
+            
+            OBS: hoje é mais recomendado usar estas configurações CSS do que usar as tags html de negrito, italico e etc...*/
+
+            /*text-decoration: underline;*/
+            /*Adiciona uma decoração, por exemplo sublinha o texto, assim como as duas proriedades anteriores prefira este ao ínves de usar tags html para sublinhar.*/
+
+            /*Perceba que coloquei todas as fontes em comentarios, gostaria de demonstrar agora uma tecnica moderna que une as 5 em uma só, é a propriedade font, sua sequência de valores é: 
+                1.font-style; 2.font-weight; 3.font-size; 4.font-family;*/
+            font: italic normal 1em Arial, Helvetica, sans-serif;/*Simples, não?*/
         }
     </style>
 </head>
