@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes</title><!--Se prepare pois aqui haverá muitos comentários explicativos:-->
+    <style>
+       div {
+            display: inline-block;
+            background-color: aliceblue;
+            text-align: center;
+            height: 100px;
+            width: 200px;
+        }
+
+        #Um > p,
+        #Dois > p,
+        #Tres > p {
+            display: none;
+        }
+
+        /* corrigidos */
+        #Um:active > p {
+            display: block;
+            color: #386641;
+        }
+
+        #Dois:hover > p {
+            display: block;
+            color: red;
+        }
+
+        #Tres:focus > p {
+            display: block;
+            color: #E06D06;
+        }
+
+        div:hover {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="Um"><!--Não se atente as div agora pois veremos melhor seu funcionamento mais a frente-->
+        <p>
+            Somente ao clicar serei revelado.
+        </p>
+
+    </div>
+    <div id="Dois">
+        <p>
+            Somente se passar o mouse por cima serei revelado.
+        </p>
+    </div>
+    <div id="Tres" tabindex="0">
+        <p>
+            Somente se eu receber foco(clique) eu serei revelado.
+        </p>
+    </div>
+</body>
+</html>

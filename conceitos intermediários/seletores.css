@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+body{
+    background-color: aquamarine;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h2{
+    color: #A09EBB;
+}
+
+#Principal{
+    color: #4C230A;
+    text-align: center;
+}/*Curiosidade sobre as ids, vocÊ pode trabalhar um único elemneto da id ou todos os elementos da id, caso ela tenha mais de um elemento, para capturar todos elementos id usamos somente a # com o seu nome junto (#Principal), para capturar um único elemento da id coloque o nome da tag antes da # (h1#Principal).
+
+OBS: é recomendável que se utilize somnete um elemnto para cada id, funciona vários, sim, porém é recomendável somente usar 1. Para o caso de você quere usar vários elementos em um mesmo seletor é recomendável usar o class, que iremos ver agora.*/
+
+.Secundario{
+    color: #A53F2B;
+}/*Como dito acima a class é recomendável para quando queremos um seletor de vários elementos, para usar ele coloque um . seguido de seu nome (.Seciundario).*/
+
+.html{
+    background-color: #16302B;
+}
+
+.css{
+    background-color: #6a0042;
+}
