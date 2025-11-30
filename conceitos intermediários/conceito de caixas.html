@@ -7,33 +7,55 @@
     <style>
         h1{
             background-color: lightgreen;
+            /*Box sizing:*/
             width: 300px;
             height: 300px;
-            /*Configurações de borda*/
+            /*anatomia de uma caixa:*/
+                /*Configurações de borda:*/
             border-width: 10px;
             border-style: solid;
             border-color: black;
-            /*Configurações de padding:*/
+                /*Configurações de padding:*/
             padding-top: 10px;
             padding-bottom: 10px;
             padding-left: 10px;
             padding-right: 10px;
+                /*Configurações de margem:*/
+
+            margin-top: 10px;
+            margin-bottom: 40px;
+            margin-left: 10px;
+            margin-right: 10px;
             
+            outline-width: 5px;
+            outline-style: dashed;
+            outline-color: blueviolet;
+                /*O outline está dentro da margem, é um espaço entre a borda e a margem*/
         }
 
         a{
             /*Configurações de borda:*/
-            border-width: 10px;
-            border-style: dashed;
-            border-color: red;
+            border: 10px solid darkslategray;
             /*Configurações de padding:*/
-            padding-top: 10px;
-            padding-bottom: 10px;
-            padding-left: 10px;
-            padding-right: 10px;
-            /*Ambos possuem um parâmetro unico onde da pra colocar todos estes dentro dele, igual o box shadow*/
-
+            padding: 10px;
+            /*Configurações outline:*/
+            outline: 10px dashed salmon;
+            /*Todos possuem um parâmetro unico(short-hands) onde da pra colocar todos estes dentro dele, igual o box shadow
+            
+            Sequências: 
+                1.border: width, style e color(OBS: o único valor obrigatório é o style.);
+                
+                2.padding: Topo, direita, baixo e esquerda.(Se você nomear só um valor ele considera a medida para todos os valore, se colocar 2 ele considera o primeiro para cima e baixo e o segundo para direita e esquerda);
+                
+                3.margin: Segue o mesmo padrão do padding.;
+                
+                4.outline: Segue o mesmo padrão do boder.;*/
         }
+
+        #Display{
+            display: inline;/*É possível transformar um elemento box em inline usando a tag display, não somente em inline, mas em qualquer outro tipo de variação!*/
+        }
+        
     </style>
 </head>
 <body>
@@ -58,7 +80,7 @@
             O h1 e o próprio parágrafo, são exemplos de box level. Usando o especuionar do google você consegue ver claramente as caixas! Perceba também que através das configurações CSS do h1, podemos mexer nesta caixa!
         </p>
 
-    <h1>Exemplo de caixa inline-level:</h1>
+    <h1 id="Display">Exemplo de caixa inline-level:</h1>
 
         <p>
             A tag &lt;a&gt; é um exemplo de inline-level: <a href="#">Eu sou inline-level!</a>
