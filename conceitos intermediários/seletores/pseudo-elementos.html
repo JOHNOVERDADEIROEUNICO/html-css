@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elementos</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a{
+            color: #71B340;
+            text-decoration: none;/*Tirando o sublinhado do link*/
+        }
+
+        a:visited{
+            color: #3C5A14;
+        }
+
+        a:hover{
+            color: #ff6a6a;
+            text-decoration: underline;/*Só irá ficar sublinhado ao passar o mouse*/
+        }
+
+        li::before{
+            content: '->';
+            text-decoration: none;
+            font-weight: normal;
+        }
+
+        li::after{
+            content: '<-';
+            text-decoration: none;
+            font-weight: normal;
+        }
+        /*Pseudo-elementos são partes “virtuais” de um elemento HTML que você pode estilizar ou até criar conteúdo sem precisar adicionar nada no HTML.
+
+        Eles não existem fisicamente no HTML, mas o CSS os cria como se fossem elementos internos.
+
+        Para identificar pseudo-elementos, usamos :: (duas barras).
+        
+        Elementos mais comuns: 
+            1.::before: Cria um conteúdo antes do elemento.;
+            
+            2.::after: Cria um conteúdo depois do elemento.;
+            
+            3.::first-letter: Estiliza a primeira letra de um bloco de texto.;
+            
+            4.::first-line: Estiliza a primeira linha visível (depende do tamanho da tela).;
+            
+            5.::selection: Estiliza o texto quando o usuário seleciona com o mouse.;
+            
+        Diferenças entre pseudo elementos e pseudo classes:
+            *Pseudo-Classe:
+
+                11.Representa um estado;
+
+                2.Não cria nada novo;
+
+                3.Usa : ;
+
+                4.Ex.: :hover, :focus;	
+            
+            *Pseudo-Elemento:
+                1.Representa uma parte interna;
+                
+                2.Pode criar conteúdo;
+                
+                3.Usa :: ;
+                
+                4.Ex.: :hover, :focus	Ex.: ::before, ::after; */
+    </style>
+</head>
+<body>
+    <h1>Personalizando links:</h1>
+
+        <ul>
+            <a href="https://www.youtube.com" target="_blank">
+                <li>Youtube</li>
+            </a>
+            <a href="https://music.youtube.com" target="_blank">
+                <li>Youtube music</li>
+            </a>
+            <a href="https://chatgpt.com" target="_blank">
+                <li>Chat-gpt</li>
+            </a>
+        </ul>
+</body>
+</html>

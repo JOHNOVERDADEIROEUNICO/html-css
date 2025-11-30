@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceito de caixas</title>
+    <style>
+        h1{
+            background-color: lightgreen;
+            width: 300px;
+            height: 300px;
+            /*Configurações de borda*/
+            border-width: 10px;
+            border-style: solid;
+            border-color: black;
+            /*Configurações de padding:*/
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            
+        }
+
+        a{
+            /*Configurações de borda:*/
+            border-width: 10px;
+            border-style: dashed;
+            border-color: red;
+            /*Configurações de padding:*/
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            /*Ambos possuem um parâmetro unico onde da pra colocar todos estes dentro dele, igual o box shadow*/
+
+        }
+    </style>
+</head>
+<body>
+    <!--Todo elemento vísivel na tela é uma caixa, lembra do canva, quando editamos um elemnto ele não abre um pontilhado em volta do elemento, ali você vê exatamente uma caixa onde o elemneto está dentro.
+    
+    Então quando estilizamos um elemento através de um CSS estamos estilizando a caixa e não o elemento em sí.
+    
+    Toda caixa tem dois parâmetros importantes, altura(height) e largura(width), além deles também temos a borda, por padrão a borda ela é colada ao elemento, caso use um padding você consegue aumentar(engordar) está borda
+    
+    Como vimos o border é o espaço interno, porém também temos a margin, que é o espaço externo a caixa. Essa "borda" fora do elemento que podemos criar também é chamado de outline.
+    
+    Esta é a anatomia de uma caixa.
+    
+        *Tipos de caixa:
+            1.box-level: Acontece uma quebra de linha entre um elemento e outro.(Exemplo: div, h1-h6, p, main, header, nav, article, aside, footer, form, video e etc...);
+            
+            2.inline-level:Os elementos estão na mesma linha.(Exemplo: span, a, code, small, strong, em, sup-sub, lavel, button, input, select e etc...);-->
+
+    <h1>Exemplo de caixa box-level:</h1>
+
+        <p>
+            O h1 e o próprio parágrafo, são exemplos de box level. Usando o especuionar do google você consegue ver claramente as caixas! Perceba também que através das configurações CSS do h1, podemos mexer nesta caixa!
+        </p>
+
+    <h1>Exemplo de caixa inline-level:</h1>
+
+        <p>
+            A tag &lt;a&gt; é um exemplo de inline-level: <a href="#">Eu sou inline-level!</a>
+        </p>
+</body>
+</html>

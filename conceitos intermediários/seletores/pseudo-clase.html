@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes</title><!--Se prepare pois aqui haverá muitos comentários explicativos:-->
+
+    <!--Antes de irmos a cada conceito, eu gostaria de lhe apresentar as pseudo-classes em CSS:
+    
+    Pseudo-classes permitem aplicar estilos quando um elemento está em um estado especial, como quando o mouse passa em cima, quando está focado, quando é o primeiro filho, quando foi clicado, etc.
+    
+    Em outras palavras: "São “palavras-chave” que você adiciona ao seletor no CSS, começando com dois pontos :, indicando que você quer estilizar um estado do elemento."
+    
+    Mas com se dá isso? simples, você escolhe um elemento e adiciona :pseudo-classe no seletor.
+    O navegador detecta automaticamente o estado e aplica o estilo apenas quando esse estado acontece.
+    
+    No fim as paseudo-classes são como eventos de uma linguagem de progamação, com a diferença de que ao invez de disparar funções, elas disparam estilos.
+    
+    Vamos agora as principais pseudo classes:
+        *Estado do usuário:
+            1.:hover: quando o mouse está por cima;
+
+            2.:active: quando o elemento está 
+            sendo clicado;
+
+            3.:focus: quando recebe foco (receber foco é quando o usuário clica ele permanece executando, diferente do active que é só quando o usuário clica.);
+
+            4.:visited: link já visitado;
+
+            5.:link: link ainda não visitado;
+        
+        *Estrutura do documento (posicionamento):
+            1.:first-child: seleciona o primeiro filho de um contêiner;
+            
+            2.:last-child: seleciona o último filho;
+            
+            3.:nth-child(n): seleciona o n-ésimo filho (permite padrões);
+            
+            4.:first-of-type: primeiro elemento daquele tipo;
+            
+            5.:not(x): seleciona tudo exceto o que estiver no seletor;
+            
+        *Estados lógicos/validação:
+            1.:checked: checkbox ou radio marcado;
+            
+            2.:disabled: campo desativado;
+            
+            3.:required: campo obrigatório;
+            
+            4.:valid: campo validado com sucesso;
+            
+            5.:invalid: campo com erro;
+    
+    Por enquanto atente-se somente aos estados de usuário (ações do usuário), mas a frente veremos os outros tipos de estado.
+    
+    OBS: obviamente não coloquei todas as pseudo-classes aqui, somente as que achei necessário.-->
+    <style>
+       div {
+            display: inline-block;
+            background-color: aliceblue;
+            text-align: center;
+            height: 100px;
+            width: 200px;
+        }
+
+        #Um > p,
+        #Dois > p,
+        #Tres > p {
+            display: none;
+        }
+        /*O sinal de maior siginifica que ele está selecionando apenas os ou o elemento p presente no id, é uma boa prática para trabalhar somente alguns elementos do html, ele pode ser usado em ids, classe ou até nas próprias tags.
+        
+        Este sinal faz parte dos combinadores(filhos, netos, bisnetos...), veja a sequência abaixo:
+        (Antes para entender melhor veja os dois códigos: 
+        1.<div id="algumIdExemplo">
+            <p>Eu sou filho direto!</p>
+        </div>
+        
+        2.<div id="algumIdExemplo">
+            <div>
+                <p>Sou neto, não sou filho direto</p>
+            </div>
+        </div>)
+            1.Descedente(espaço): ao dar um espaço (exemplo: #conteudo p), ele seleciona todods os elemnetos p daqueele id, podem ser filhos, netos, etc.
+            
+            2.Filho direto(>): Apenas o elemnto imediato, ou seja os filhos do id.
+            
+            3.Irmão adjacente(+): (exemplo css: h2 + p{}
+            em html: 
+            <h2>Título</h2>
+            <p>Eu sou o parágrafo imediatamente depois do h2 — sou afetado!</p>
+
+            <p>Eu NÃO sou afetado, mesmo sendo um p depois do h2.</p>)
+            
+            4.Irmão geral(~): (exemplo em css: h2 ~ p{}
+            em html:
+            <h2>Título</h2>
+
+            <p>Sou afetado!</p>
+            <p>Eu também!</p>
+
+            <div>
+                <p>Eu NÃO sou afetado porque não sou irmão — estou dentro de outro elemento.</p>
+            </div>)
+        Legal, não?*/
+
+        #Um:active > p {
+            display: block;
+            color: #386641;
+        }
+
+        #Dois:hover > p {
+            display: block;
+            color: red;
+        }
+
+        #Tres:focus > p {
+            display: block;
+            color: #E06D06;
+        }
+
+        div:hover {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="Um"><!--Não se atente as div agora pois veremos melhor seu funcionamento mais a frente-->
+        <p>
+            Somente ao clicar serei revelado.
+        </p>
+
+    </div>
+    <div id="Dois">
+        <p>
+            Somente se passar o mouse por cima serei revelado.
+        </p>
+    </div>
+    <div id="Tres" tabindex="0">
+        <p>
+            Somente se eu receber foco(clique) eu serei revelado.
+        </p>
+        <!--Detalhe importante, elementos não interátivos como a div, o focus não funciona, porém, se colocarmos um tabindex ele resolve essa questão, porém já fique sabendo, focus é para elementos de natureza interativa.
+    
+    Dentre os elementos de natureza interativa temos:
+        1.<input>;
+
+        2.<button>;
+
+        3.<a href="">;
+
+        4.<select>;
+
+        5.<textarea>;
+
+        6.elementos com tabindex;-->
+    </div>
+</body>
+</html>
