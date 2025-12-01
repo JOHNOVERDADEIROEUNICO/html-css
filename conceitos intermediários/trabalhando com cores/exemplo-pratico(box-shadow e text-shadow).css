@@ -31,5 +31,5 @@ main{
     margin: auto;/*Ele se austa ao centro automaticamente independente do tamnho da tela.*/
     border-radius: 10px;/*Faz a borda ficar em formato circular*/
 
-    box-shadow: 5px 15px 15px #3a606e86;/*Cria uma sombra em torno do elemnto, sendo o primeiro lado, baixo, espalhamento e cor.*/
+    box-shadow: outset 5px 15px 15px 1px #3a606e86;/*Cria uma sombra em torno do elemento, sendo o primeiro outset(fora do elemento(padrão))/inset(dentro do elemento) lado, baixo, espalhamento, alcance e cor.*/
 }

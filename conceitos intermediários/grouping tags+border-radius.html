@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #544B3D;
+            margin: 0px;
+        }
+        header{
+            background-color: #4E6E58;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        header > h1{
+            text-align: center;
+        }
+
+        nav{
+            background-color: #94dcd0;
+            padding: 3px;
+            box-shadow: 5px 3px 7px 1px rgba(0, 0, 0, 0.192);
+        }
+
+        nav > a{
+            text-decoration: none;
+            color: #FFFFB3;
+            font-weight: bold;
+            margin-right: 30px;
+            margin-left: 100px;
+        }
+
+        nav > a:hover{
+            text-decoration: underline;
+        }
+
+        main{
+            background-color: #A6ECE0;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 20px;/*Arrendonda a caixa, o boder-radius também é um short-hand, tendo top-left, top-right e bottom-left, bottom-right*/ 
+        }
+
+        article{
+            background-color: #719f7f;
+            padding: 5px;
+        }
+
+        article > aside{
+            background-color: #4E6E58;
+        }
+        footer{
+            background-color: #4C8577;
+            color: #FFFFB3;
+            text-align: center;
+            padding: 4px;
+            margin: 0px;
+        }
+        footer > p{
+            margin: 0px;
+        }
+        #Bola{
+            /*Não se faz isso que irei fazer agora, é apenas para demonstrar como fazer uma bola com o boder-radius:*/
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            background-color: #719f7f;
+            border-radius: 50%;
+        }
+        
+    </style>
+</head>
+<body>
+    <!--Antigamente as tags de agrupamento eram divididas apenas em div e span, como explicado anteriormente as div sendo do tipo box-level e os span do tipo inline-level.
+    
+    Porém o HTML evoluiu e temos mais tags com semântica que tem a mesma funcionalidade, porêm para contextos diferentes, então quando vemos header(cabeçalho), main(conteúdo principal) e footer(rodapé) vemos 3 div porém para contextos diferentes.-->
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav><!--A tag <nav> em HTML é usada para agrupar links de navegação dentro de uma página. Ela indica ao navegador (e a mecanismos de busca, leitores de tela, etc.) que aquele bloco contém elementos de navegação, como menus, barras de links, índices, etc.
+        
+        ❗O que pode ir dentro da <nav>?
+
+            1.Links.;
+
+            2.Listas (ul, ol).;
+
+            3.Ícones.;
+
+            4.Botões (como menu hamburguer).;
+
+            5.Imagens pequenas relacionadas ao menu.;
+
+        ❌ O que não é recomendável?
+
+            Usar <nav> para todos os links da página. Ela deve conter apenas os principais links de navegação.-->
+    </header>
+    <main>
+        <section id="Noticicas">
+            <article>
+                <h2>Noticias do Brasil:</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ipsa, consectetur magnam ratione, vitae, dignissimos nam laboriosam natus voluptates similique ab. Fugiat dolore quibusdam pariatur dignissimos quos, magni excepturi voluptas!
+                </p>
+                <aside>
+                    <p>
+                        Artigo escrito por José da Silva.
+                    </p>
+                </aside>
+            </article>
+        </section>
+
+        <!--As três(section, article e aside) são tags semânticas do HTML5, usadas para dar significado à estrutura da página. Aqui vai cada uma, de forma simples e clara:
+        
+        1.<section>: Um bloco temático da página. Agrupa conteúdo que faz parte de um mesmo assunto.
+
+        Quando usar:
+
+            1.Para dividir grandes partes do site: “Sobre”, “Serviços”, “Contato”…;
+
+            2.Dentro de artigos, para separar tópicos.;
+            
+        2.<article>: Um conteúdo independente e autossuficiente. Pode ser lido isoladamente.
+
+        Quando usar:
+
+            1.Post de blog.;
+
+            2.Notícia.;
+
+            3.Comentário.;
+
+            4.Produto em um catálogo.;
+
+            5.Card com conteúdo que faz sentido sozinho.;
+            
+        3.<aside>: Conteúdo relacionado, mas não essencial à parte principal.
+        Funciona como uma barra lateral ou informações extras.
+
+        Quando usar:
+
+            1.Links relacionados.;
+
+            2.Anúncios.;
+
+            3.Biografia do autor ao lado do artigo.;
+
+            4.Caixas de “leia também”.;-->
+    </main>
+    <footer>
+        <p>
+            Desenvolvido por JOHNOVERDADEIROEUNICO
+        </p>
+    </footer>
+    <div id="Bola">
+
+    </div>
+</body>
+</html>
