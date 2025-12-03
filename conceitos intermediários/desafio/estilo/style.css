@@ -1,1 +1,162 @@
 @charset "UTF-8";
+
+/*
+#386641 (Verde escuro)
+#6A994E (Verde musgo)
+#A7C957 (Verde Hulk)
+#F2E8CF (Branco, leve amarelo)
+#BC4749 (Vermelho fosco um pouco escuro)
+*/
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bruno-ace-sc-regular {
+  font-family: "Bruno Ace SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root{
+    --cor0: #386641;
+    --cor1: #6A994E;
+    --cor2: #A7C957;
+    --cor3: #F2E8CF;
+    --cor4: #BC4749;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, Sans-serif;
+
+    --fonte-bebas: "Bebas Neue", sans-serif;
+    --font-android: "Bruno Ace SC", sans-serif;
+}
+/*:root é um seletor especial do CSS que representa o elemento raiz do documento.
+
+No HTML, esse elemento raiz é sempre o <html>.
+
+Na prática seria o mesmo que escrever html{} no CSS, porém, existe a preferencia do uso de :root com variáveis devido ao :root ter maior especificidade que html.
+
+Isso significa que, se houver conflitos, o CSS dá mais "valor" ao :root.
+Por isso, ele é muito usado para declarar variáveis globais de tema.*/
+
+/*Dentro do :root veja que temos um elemento que sempre começa com dois traços(--), estas são as variáveis em CSS, são usadas em qualquer elemento CSS, não é algo exclusivo do :root, vamos ver sobre seu funcionanmento agora:
+
+As variáveis CSS são chamadas de custom properties e sempre começam com --.
+
+Depois de declaradas você as utiliza assim:
+    h1 {
+    color: var(--cor-principal);
+    font-size: var(--tamanho-titulo);
+    }
+Vamos a alguns detalhes sobre a linguagem:
+    1. Variáveis são herdadas: Diferente das variáveis tradicionais de linguagens de programação,
+    as variáveis CSS fazem parte do Cascade, então seguem as regras de herança.
+
+    Se você declara no :root, toda a página herda.;
+    
+    2. Podem ser sobrescritas:
+        :root {
+    --bg: white;
+    --texto: black;
+    }
+
+    .dark-mode {
+        --bg: #121212;
+        --texto: white;
+    }
+    Perceba que na classe dark-mode a cor do fundo e do texto foram modificadas.;
+    
+    3. Podem ter valores dinâmicos: Variáveis funcionam com cálculos:
+        :root {
+            --espacamento: 10px;
+            --espacamento-duplo: calc(var(--espacamento) * 2);
+        };
+    
+    4. Não são pré-processadas (não são iguais a SCSS/LESS)
+
+    Variáveis CSS são aplicadas em tempo real, direto no navegador.
+    Isso significa que mudanças no DOM(JS)podem alterar os valores dinamicamente.Exemplo:
+        :root {
+            --primary: #ff6b6b;
+            --radius: 10px;
+        }
+
+        button {
+            background: var(--primary);
+            border-radius: var(--radius);
+            padding: 10px 20px;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            --primary: #ff3838; /* Muda apenas para este botão 
+        }
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--fonte-padrao);
+    background-color: var(--cor3);
+}
+
+header{
+    background-color: var(--cor0);
+    padding: 20px;
+    border-radius: 10px;
+
+    max-width: 800px;
+    min-width: 280px;
+    margin: auto;
+}
+
+header > h1{
+    color: white;
+    font-family: var(--fonte-bebas);
+    text-align: center;
+}
+
+nav{
+
+}
+
+main{
+    background-color: whitesmoke;
+    padding: 20px;
+    border-bottom: 10px;
+    
+    max-width: 800px;
+    min-width: 280px;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.462);
+
+}
+
+article > h2, h3{
+    color: var(--cor0);
+    font-family: var(--font-android);
+}
+
+picture > img{
+    width: 100%;
+}
+
+footer{
+    background-color: var(--cor0);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+
+    max-width: 800px;
+    min-width: 280px;
+    margin: auto;
+
+    text-align: center;
+}
+/*Todas as configurações em header, main, footer, são configurações de responsividade ou seja que ajudam as imagens, divs, textos a se adaptarem a altura e largura da nossa tela. Fique a vontade para explorar.*/
