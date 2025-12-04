@@ -107,10 +107,10 @@ body{
 }
 
 header{
-    background-color: var(--cor0);
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor0), rgb(28, 27, 27));
     padding: 20px;
-    border-radius: 10px;
-
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     max-width: 800px;
     min-width: 280px;
     margin: auto;
@@ -120,10 +120,36 @@ header > h1{
     color: white;
     font-family: var(--fonte-bebas);
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.047);
 }
 
+header > p{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.047);
+    font-size: 1.1em;
+    margin: auto;
+}
 nav{
+   padding-top: 10px;
+   text-align: center;/*Curiosidade, um link só centraliza se você colocar o text aign no elemento pai dele.*/
+}
 
+nav > a{
+    color: var(--cor3);
+    font-family: var(--fonte-bebas);
+    text-decoration: none;
+    padding-left: 10px;
+    margin: 0 10px;
+    transition-duration: .6s;
+}
+
+nav > a:hover{
+    background-color: #f1d58da8;
+    padding-right: 10px;
+    border-radius: 5px;
 }
 
 main{
@@ -138,21 +164,102 @@ main{
 
 }
 
+main p{
+    color: rgb(48, 47, 47);
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 7px;
+    line-height: 1.5em;
+}/*Quando não há um sinal de maior significa que pode ser o elemento em qualquer nível de descendência e não o elemento direto.*/
+
+main strong{
+    color: var(--cor4);
+}
+
+main a{
+    color: var(--cor1);
+    text-decoration: none;
+    
+}
+
+main a:hover{
+    text-decoration: underline;
+}
+
 article > h2, h3{
     color: var(--cor0);
     font-family: var(--font-android);
 }
 
+article > h3{
+    background-image: linear-gradient(to right, #4ea41c, transparent);
+}
+
 picture > img{
+    display: block; /*Imagens são inline-block por padrão, como vimos no link acima inline ou inline-block só centraliza se centralizarmos pelo pai, porém ai vamos bagunçar tudo. Então para que consigamos centraliza-las individualmente precisamos transformá-las em block.*/
+    margin: auto;
     width: 100%;
 }
 
+picture > #Diferentao{
+    max-width: 350px;
+}
+
+#video{
+    background-color: #386641;
+    margin-bottom: 10px;
+    padding: 20px;
+    padding-bottom: 15px;
+    text-align: center;
+    margin: auto;
+}
+
+#video iframe{
+    width: 100%;/*Faz ele se austar dinâmicamente*/
+    aspect-ratio: 16/9;
+    height: auto;/*Tanto aspect-ratio, quanto height fazem a tela do video se manter no lugar.*/
+}
+
+aside {
+    background-color: var(--cor4);
+    margin-top: 10px;
+}
+
+aside h3{
+    color: whitesmoke;
+    text-align: center;
+    background-color: #7a2d2e;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+aside strong{
+    color: aliceblue;
+}
+
+aside p{
+    color: black;
+    padding: 10px;
+}
+
+aside ul{
+    list-style-position: inside;
+    padding-left: 10px;
+}
+
+aside li{
+    padding: 5px;
+}
+
+aside li > abbr{
+    text-decoration: none;
+}
 footer{
     background-color: var(--cor0);
     color: white;
     padding: 10px;
-    border-radius: 10px;
-
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     max-width: 800px;
     min-width: 280px;
     margin: auto;
