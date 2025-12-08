@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testar imagem de fundo</title>
+    <style>
+        body{
+            background-image: url(imagens-cap19/wallpaper001.jpg);
+        }
+        .Container{
+            text-align: center;
+        }
+        .Quadrado{
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: aliceblue;
+            width: 20%;
+            max-width: 300px;
+            aspect-ratio: 1;
+            margin: auto;
+            vertical-align: top;
+        }
+
+        #Q1{
+            background-color: aqua;
+        }
+        #Q2{
+            background-image: linear-gradient(to bottom, yellow, rgb(255, 106, 0));
+        }
+        #Q3{
+            background-image: url(imagens-cap19/pattern001.png);
+        }/*Usando o valor url poremos adicionar imagens de fundo!*/
+        #Q4{
+            background-image: url(imagens-cap19/wallpaper002.jpg);
+        }/*Perceba que a imagem da 3 div é muita pequena e o CSS meio que tem que ajustar coloando a imagem repetidas vezes no espaço, já quando a 4 é muito grande ele não diminui, só coloca o que da pra colocar naquele espaço.*/
+
+        /*No fundo2.html iremos ver como resolver isso personalizando.*/
+    </style>
+</head>
+<body>
+    <div class="Container">
+        <div class="Quadrado" id="Q1">
+        </div>
+        <div class="Quadrado" id="Q2">
+        </div>
+        <div class="Quadrado" id="Q3">
+        </div>
+        <div class="Quadrado" id="Q4">
+    </div>
+
+    </div>
+</body>
+</html>

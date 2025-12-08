@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalizando imagens de fundo</title>
+    <style>
+        .Container{
+            text-align: center;
+        }
+        .Quadrado{
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: aliceblue;
+            width: 30%;
+            max-width: 300px;
+            aspect-ratio: 1;
+            margin: auto;
+            vertical-align: top;
+        }
+
+        #Q1{
+            background-image: url(imagens-cap19/wallpaper002.jpg);
+            background-size: 300px;
+        }
+        #Q2{
+            background-image: url(imagens-cap19/pattern001.png);
+            background-size: 300px;
+        }/*Perceba que com o size eu consigo reduzir/aumentar o tamanho da imagem, porém não resolve o problema do clone (caso a imagem seja menor que o espaço ele a clona para preencher o espaço).*/
+        #Q3{
+            background-image: url(imagens-cap19/pattern004.png);
+            background-repeat: no-repeat;
+        }/*Perceba que com o background repeat colocando o valor no-repeat ele para gerar clones!*/
+    </style>
+</head>
+<body>
+    <div class="Container">
+        <div class="Quadrado" id="Q1">
+        </div>
+        <div class="Quadrado" id="Q2">
+        </div>
+        <div class="Quadrado" id="Q3">
+    </div>
+
+    </div>
+</body>
+</html>
