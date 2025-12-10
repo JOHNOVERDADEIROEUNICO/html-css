@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>relativo absoluto</title>
+    <style>
+        #Container{
+            background-image: url(imagens-cap19/target001.png);
+            background-size: 100% 100%;/*Define que a imagem ocue 100% do espaço, sem ele a imagem se multiplica para caber na tela*/
+
+            position: relative;/*Por padrão uma caixa já é relativo*/
+            height: 96vh;/*Faz com que a imagem ocupe quase todo espaço da página, 100vh é todo espaço.*/
+            padding: 10px;
+            background-color: purple;
+        }
+        #Conteudo{
+            background-image: url(imagens-cap19/target001.png);
+            background-size: 100% 100%;
+
+            position: absolute;/*Aprendemos o básico sobre alinhar conteúdo, usando o margin auto, porém, quando deixamos o position em absolute podemos editar a exata posição dele dentro de um plano cartesiano (tela/página), para configurar usamos as propriedades left e top.*/
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+
+            left: 50%;
+            top: 50%;/*Aqui configuramos a exara posição dele na página ou seja no centro, porém para esta caixa temos um problema...*/
+
+            transform: translate(-50%, -50%);/*Quando definimos acima o top e o left ele realmente centralizou porém considerando o canto superior esquerdo da caixa, e ai está o problema, se quisermos centralizar com o HTML considerando o centro da caixa precisamos transformar_la, ai entra esta propriedade.
+            
+            Esta propriedade transform, serve para fazer diversas modificações na caixa, podemos rotacionar, modificar perspectiva, transformar em 3d e por ai vai... aqui usmoas a "função" translate que também modifica a posição da caixa, se usarmos valores positivos ele vai modificar a direita e em baixo, se usarmos negativos ele vai modificar a esquerda e em cima, assim corrigindo este detalhe do HTML considerar o canto superior esquerdo.*/
+        }
+    </style>
+</head>
+<body>
+    <section id="Container">
+        <article id="Conteudo">
+
+        </article>
+    </section>
+</body>
+</html>

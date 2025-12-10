@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+.passion-one-regular {
+  font-family: "Passion One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sriracha-regular {
+  font-family: "Sriracha", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root{
+    --cor0: #000000;
+    --cor1: #FFFFFF;
+    --cor2: #727072;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, Sans-serif;
+
+    --fonte-passion-one: "Passion One", sans-serif;
+    --fonte-sriracha: "Sriracha", cursive;
+}
+
+header{
+    background-color: var(--cor0);
+    color: var(--cor1);
+    font-family: var(--fonte-passion-one);
+    text-align: center;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+
+}
+header > h1{
+    font-size: 3.8em;
+}
+
+header > p{
+    font-family: var(--fonte-padrao);
+}
+
+header a{
+    color: var(--cor1);
+    text-decoration: none;
+}
+header a:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.688);
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.NoImage{
+    padding: 20px;
+    height: auto;
+    
+    background-color: var(--cor1);
+}
+.Image{
+    padding: 20px;
+    height: auto;
+    background-color: var(--cor2);
+}
+
+.Poesia{
+    white-space: pre-line;
+    font-family: var(--fonte-sriracha);
+    text-align: justify;
+    font-weight: 400;
+    font-size: 1.8em;
+    
+}
+
+footer{
+    background-color: var(--cor0);
+    color: var(--cor1);
+    text-align: center;
+}
