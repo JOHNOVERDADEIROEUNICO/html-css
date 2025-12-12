@@ -12,6 +12,15 @@
   font-style: normal;
 }
 
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+html, body{
+    min-height: 100vh;
+}
+
 :root{
     --cor0: #000000;
     --cor1: #FFFFFF;
@@ -28,16 +37,16 @@ header{
     color: var(--cor1);
     font-family: var(--fonte-passion-one);
     text-align: center;
-    padding: 10px;
-    height: 100%;
-    width: 100%;
-
 }
 header > h1{
-    font-size: 3.8em;
+    padding-top: 50px;
+    font-size: 4.8em;
+    font-variant: small-caps;
+    font-size: 10vh;
 }
 
 header > p{
+    padding-bottom: 50px;
     font-family: var(--fonte-padrao);
 }
 
@@ -54,15 +63,27 @@ header a:hover{
 }
 
 .NoImage{
-    padding: 20px;
+    position: relative;
+    padding-top: 10vh;/*Acabei de descobrir 1vh = 10px*/
+    padding-bottom: 10vh;
     height: auto;
+    
     
     background-color: var(--cor1);
 }
 .Image{
-    padding: 20px;
+    position: relative;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
     height: auto;
-    background-color: var(--cor2);
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.64);
+}
+
+#I1{
+   background: black url(pacote-d012/imagens/background001.jpg) right center /cover no-repeat fixed;
+}
+#I2{
+    background: black url(pacote-d012/imagens/background002.jpg) right center /cover no-repeat fixed;
 }
 
 .Poesia{
@@ -70,8 +91,17 @@ header a:hover{
     font-family: var(--fonte-sriracha);
     text-align: justify;
     font-weight: 400;
-    font-size: 1.8em;
+    font-size: 3.5vh;
+    margin-left: 40px;
     
+}
+
+.Image > .Poesia{
+    width: 400px;
+    padding: 10px;
+    background-color: #00000091;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px black;
 }
 
 footer{
