@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>celulas tabelares</title>
+    <style>
+         table{
+            width: 400px;
+            height: 200px;
+            border-collapse: collapse;
+            position: relative;
+        }
+        caption{
+            background-color: rgb(39, 39, 39);
+            color: aliceblue;
+            font-size: 1.1em;
+            padding: 10px;
+            font-weight: bold;
+        }
+        thead th{/*Essas configurações junto do position relative no tabel, faz com que o cabeçalho desça junto da página enquanto houver tabela.*/
+            position: sticky;
+            top: 0;
+            background-color: black;
+        }
+        /*Curiosidade: esta pseudo-classe abaixo consegue adicionar o tal efeito zebrado ou seja a cada linha par ele adiciona a configuração*/
+        tbody > tr:nth-child(2n){
+            background-color: rgb(185, 185, 185);
+        }
+        thead,tfoot{
+            background-color: black;
+            color: aliceblue;
+        }
+        td,th,caption{
+            border: 1px solid black;
+            padding: 5px;
+            vertical-align: top;
+        }
+        tfoot {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mesclagem de celulas</h1>
+        <table>
+            <caption>Poupulação das unidades federativas</caption>
+            <thead>
+                <tr>
+                    <th scope="Col">
+                        Posição
+                    </th>
+                    <th scope="Col">
+                        Estado
+                    </th>
+                    <th scope="Col" style="width: 50px;">
+                        populção
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>São Paulo</td>
+                    <td>46,00 milhões</td>
+                </tr>
+                <tr>
+                    <td>
+                        2
+                    </td>
+                    <td>
+                        Rio de Janeiro
+                    </td>
+                    <td>
+                        17,22 milhões
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Goiás</td>
+                    <td>7,35 milhões</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row">Total de habitantes</th>
+                        <td colspan="2">70.57 milhões</td><!--A função colspan consegue fazer com que a celula ocupe mais de uma coluna! Além do colspan temos o rowspan que ao invez de colunas trabalha com as linhas! mas o que é um celulca?
+                        
+                        Em tabelas HTML, uma célula é cada “caixinha” individual onde o conteúdo é colocado (texto, números, imagens etc.), semelhante às células de uma planilha 📊.
+                        
+                        Ou seja cada th e td são uma celula.-->
+                </tr>
+            </tfoot>
+        </table>
+</body>
+</html>
