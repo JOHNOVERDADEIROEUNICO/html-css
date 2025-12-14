@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos de iframe</title>
+</head>
+<body>
+    <h1>Testando o uso de um iframe</h1>
+        <p>
+            Acessando 
+            <iframe src="https://www.cursoemvideo.com" frameborder="0">
+                <a href="https://www.cursoemvideo.com">Curso em video</a><!--Caso o navegador não seja compátivel, dentro do conteúdo da tag podemos colocar uma menssagem informando ou até um link levando ao site.-->
+            </iframe>
+            O site do guanabara devido aos outros sites que pensei terem restrições de segurança.
+        </p>
+        <!--Um iframe em HTML (inline frame) é uma tag usada para incorporar outra página HTML dentro da sua própria página.
+
+        Em outras palavras, ele cria uma “janela” dentro do site que exibe conteúdo de outro site ou de outra página do seu próprio projeto.
+
+        🧠 Para que serve um iframe?
+        Ele é muito usado para:
+
+            1.Embutir vídeos do YouTube;
+
+            2.Mostrar mapas do Google Maps;
+
+            3.Carregar outros sistemas ou páginas;
+
+            4.Exibir conteúdo externo sem sair do site;
+        
+        iframe é display inline.
+        
+        A função frameboder quando está em 0 remove a borda
+        
+        🔒 Limitações e segurança
+
+        Nem todo site permite ser exibido em um iframe.
+
+        Isso acontece porque:
+
+        O site pode bloquear via headers de segurança (X-Frame-Options, Content-Security-Policy)
+
+        Evita ataques como clickjacking
+
+        👉 Por isso você pode ver erros como:
+
+        “refused to connect”
+        
+        ✅ Quando usar (e quando evitar)
+
+        ✔ Use quando:
+
+            1.Precisa integrar conteúdo externo confiável;
+
+            2.Vídeos, mapas, widgets;
+
+        ❌ Evite quando:
+
+            1.Pode resolver com HTML/CSS/JS próprios;
+
+            2.Precisa de total controle de estilo e interação;
+            
+        Por padrão o iframe vem em formato de 300x150px.
+        ⚙️ Atributos mais comuns:
+            width / height → tamanho
+
+            title → acessibilidade (muito importante)
+
+            allowfullscreen → permite tela cheia
+
+            loading="lazy" → carrega só quando aparecer na tela-->
+        <p>
+            <iframe src="https://www.cursoemvideo.com" width="400px" height="400px"></iframe>
+            <!--Pode se personalizar a bordar usando frameborder ou usando css do mesmo modo width e height, só estou demonstrando que existem esses valores dentro do iframe.-->
+        </p>
+</body>
+</html>
