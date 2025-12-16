@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe mais seguro</title>
+</head>
+<body>
+    <h1>Aumentando a segurança de um iframe:</h1>
+    <iframe src="iframe3 sites/site1.html" frameborder="1" sandbox="sandbox" referrerpolicy="no-referrer"></iframe>
+    <!--O atributo sandbox da tag <iframe> serve para restringir o que o conteúdo carregado dentro do iframe pode fazer, aumentando a segurança da página.
+
+    Ele cria um ambiente isolado (sandbox = “caixa de areia”), onde o conteúdo embutido perde várias permissões por padrão.
+    
+    Quando usado sem nenhum valor, o conteúdo dentro do iframe fica altamente restrito.
+    
+    O que o sandbox bloqueia por padrão?
+    Sem permissões adicionais, o iframe NÃO pode:
+
+        1.Executar JavaScript;
+
+        2.Enviar formulários;
+
+        3.Abrir pop-ups;
+
+        4.Acessar cookies, localStorage ou sessionStorage;
+
+        5.Navegar a página principal (window.top);
+
+        6.Ser considerado da mesma origem (same-origin);
+
+        👉 Na prática, o conteúdo fica quase “somente leitura”.
+        
+    Liberando permissões específicas
+
+    Você pode liberar funcionalidades uma a uma, passando valores ao sandbox.
+    
+    Permissões mais comuns:
+    Permissão   /	O que libera;
+    allow-scripts  /	Executar JavaScript;
+    allow-forms  /	Enviar formulários;
+    allow-popups /	Abrir janelas (window.open);
+    allow-same-origin /	Considerar o iframe como mesma origem;
+    allow-top-navigation /	Navegar a página principal;
+    allow-downloads /	Permitir downloads;
+    allow-modals /	Abrir alert, confirm, prompt;
+    
+    Por que o sandbox é importante?
+
+    Ele é muito usado quando você:
+
+        1.Carrega conteúdo de terceiros;
+
+        2.Exibe anúncios;
+
+        3.Incorpora sites externos;
+
+        4.Quer evitar ataques XSS, roubo de dados ou redirecionamentos maliciosos;
+
+    Relação com erros de iframe que você já viu
+
+    Lembra quando um site “se recusa a conectar” no iframe?
+    Isso pode acontecer porque:
+
+    O site usa X-Frame-Options
+
+    Ou porque o sandbox está bloqueando alguma funcionalidade necessária-->
+
+    <!--O referrerpolicy serve para bloquear coleta de dados do site que está dentro do iframe, assim aumentando a proteção.-->
+
+    <!--Para impedir com que outros sites utilizem o seu como um iframe, você deve fazer configurações nos cabeçalhos http de segurança do servidor usando os comandos:
+        1.x-Frame-Options: DENY/SAMEORIGIN (DENY bloqueia e o SAMEORIGIN permite somente sites de mesmo domínio.);
+        
+        2.Content-Security-Policy (Recomendado):  frame-ancestrs 'none'/ frame-ancestors 'self' / frame-ancestors 'self' https://meusite.com.br (1.Todo iframe, 2.Apenas o próprio site, 3.Permite sites especificos.)
+        
+    Essas configurações podem ser feitas em Apache (.htaccess), ASP.NET / C#, Nginx.
+    -->
+        </body>
+</html>
