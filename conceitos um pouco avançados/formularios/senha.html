@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senha em formularios</title>
+</head>
+<body>
+    <h1>Criando uma caixa de senha</h1>
+    <form action="cadastro.php" method="post" autocomplete="off">
+        <p>
+            <label for="Iusu">Usuario:</label>
+            <input type="text" name="Usuario" id="Iusu" required minlength="3" maxlength="27" size="27" placeholder="Name">
+        </p>
+        <p>
+            <label for="Isenha">Senha:</label>
+            <input type="password" name="Senha" id="Isenha" required minlength="4" maxlength="12" size="12" placeholder="password"><!--Com o required ele exige que o campo seja preenchido e já gera uma mensagem de alerta caso o usuário não preencha. 
+            
+            Como vemos acima após o required podemos colocar configurações exigidas para os campos.
+            
+            size faz com que a caixa tenha o tamanho dos caracteres que queremos
+            
+            placeholder adiciona aquelas mensagens dentro da caixa de texto.-->
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p><!--Perceba que os inputs quando selecionamos os seus tipos eles já vem configurados, a senha com a opção de visivel ou não, o botão de reset limpa tudo e por ai vai.-->
+    </form>
+</body>
+</html>

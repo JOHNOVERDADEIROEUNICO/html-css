@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 2</title>
+</head>
+<body>
+    <h1>Meu segundo formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on"><!--O autocomplete por padrão já vem on, porém aqui é só pra demosntrar que esta função ativa ou desativa o navegador salvar as informações digitadas e depois recomendar elas para o usuario digitar novamnete.-->
+        <label for="Inome">Nome:</label>
+        <input type="text" name="Nome" id="Inome">
+        <label for="Isobrenome">Sobrenome:</label>
+        <input type="text" name="Nome" id="Isobrenome">
+        <input type="submit" value="Enviar">
+    </form><!--Hoje veremos o method que define COMO os dados do formulário serão enviados para o backend.
+    
+    Se você for esperto e ver a url que é enviada quando clicamos em enviar você perceberá que os nomes estão disponíveis na propria url, nem preciso dizer o perigo disto certo? ai entra o get e o post
+    
+        1.Get(Se caso não colocar o method ele vem get por padrão): o get envia os dados pela url.
+        
+            *Características do GET:
+
+                a.Dados ficam visíveis na URL;
+
+                b.Pode ser salvo nos favoritos;
+
+                c.Tem limite de tamanho;
+
+                d.Não é seguro para dados sensíveis;
+
+                e.Ideal para consultas;
+
+            📌 Quando usar:
+
+                a.Busca;
+
+                b.Filtros;
+
+                c.Paginação;
+
+                d.Listagem de dados;
+                
+        2.Post: Envia os dados no corpo da requisição.
+        
+            Características do POST:
+
+                a.Dados não ficam visíveis;
+
+                b.Sem limite prático de tamanho;
+
+                c.Mais seguro (mas não criptografa sozinho);
+
+                d.Ideal para operações sensíveis;
+            
+            📌 Quando usar:
+
+                a.Login;
+
+                b.Cadastro;
+
+                c.Envio de senha;
+
+                d.Criação / alteração de dados;
+                
+            Importante ressaltar que o post evita que os dados apareçam na url, porém ainda sim eles podem ser capturados com facilidade no próprio inspecionar por exemplo você já consegue visualizar, para maior segurança é utilizado criptografia em https que veremos mais a frente.-->
+</body>
+</html>

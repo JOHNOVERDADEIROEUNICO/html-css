@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu Primeiro Formulário</h1>
+    <form action="cadastro.php"><!--Todo formulário fica dentro da tag form.
+        O action indica a URL de destino que vai receber e processar os dados do formulário, no caso aqui estamos dando o exemplo em php, mas poderia ser qualquer outra linguagem de progamação, como java ou c# ou python
+        
+        O JS pode ou não ser utilizado nesse caso também, depende se é um node.js ou um JS de navegador(no caso do JS fornt-end não pode.)
+        
+        Quando enviarmos os dados a essas linguagens sua função principla será de processar os dados de forma segura e redirecionar a um banco para salvar estes mesmos.
+        
+        Se nã houver um action, o formulário será enviado para a mesma página, nesse caso é somente feito desta forma em validações simples e os dados são tratado em JS mesmo.-->
+
+        <label for="Inome">Nome:</label>
+        <input type="text" name="Nome" id="Inome">
+
+        <label for="Isobrenome">Sobrenome:</label>
+        <input type="text" name="Sobrenome" id="Isobrenome">
+        
+        <input type="submit" value="Enviar">
+        <!--Os input servem para receber e enviar dados, como vemos acima usando a caixa de texto e o botão enviar, os tipos justamente definem a função do input.-->
+
+    </form>
+        <!--O que é um label?
+        
+        Em HTML, o <label> é uma tag usada para identificar e descrever um campo de formulário (como input, textarea, select).
+        Ela melhora usabilidade, acessibilidade e experiência do usuário.
+
+        Essa acessibilidade é justamente com o propósito de ajudar pessoas com deficiências ou até mesmo melhorar a experiência de usuário como cito no exemplo abaixo:
+        
+        Quando o usuário clicar em nome por exemplo o label reconhece que ele quer digitar no campo de texto com o mesmo id, assim gerando aior acessibilidade, isto é muito bom para mobile por exemplo, onde em telas pequenas o usuário pode acabar tendo dificuldades pra tocar na caixa de texto.-->
+
+        <!--Diferença entre name e id, os id serão mais utilizados em JS e label, já os names em php e html.-->
+    </form>
+    <!--Devido a aqui está ficando cheio de comentários continuamos no proximo arquivo.-->
+</body>
+</html>
