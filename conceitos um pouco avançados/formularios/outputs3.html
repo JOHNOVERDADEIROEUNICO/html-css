@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outputs 3</title>
+</head>
+<body>
+    <h1>Outputs 3: (calculo de idade)</h1>
+    <form action="">
+        <p>
+            <label for="Inano">Ano de nascimento:</label>
+            <input type="number" name="ano" id="Inano" min="1900" max="2025" step="1" oninput="iidade.innerHTML = 2025 - Number(Inano.value)" required>
+        </p>
+        <p>
+            <label for="iidade">Idade:</label>
+            <output name="idade" id="iidade" for="Inano">0</output><!--Neste exemplo, o output exibe a idade calculada a partir do ano de nascimento inserido no input.
+            
+            A função oninput subtrai o valor do input do ano atual (2025) para calcular a idade em tempo real.-->
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+</body>
+</html>

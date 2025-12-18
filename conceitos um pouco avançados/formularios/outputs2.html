@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outputs 2</title>
+</head>
+<body>
+    <h1>Outputs, o que são? como se alimentam? como se reproduzem?</h1>
+    <form action="">
+        <p>
+            <label for="Inum">Nota:</label>
+            <input type="range" name="num" id="Inum" min="0" max="10" step="0.1" value="5" oninput="inota.innerHTML = Inum.value" required>
+            <output id="inota">5</output><!--O output também consegue exibir o valor de um range, além de outros elementos como inputs de número e outros tipos de campos. 
+            
+            Perceba que o 5 é o valor inicial do range.-->
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

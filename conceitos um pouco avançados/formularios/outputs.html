@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outputs</title>
+</head>
+<body>
+    <h1>Outputs, o que são? como se alimentam? como se reproduzem?</h1>
+    <form action="">
+        <p>
+            <label for="In1">Número 1:</label>
+            <input type="number" name="n1" id="In1" min="0" max="100" step="1" oninput="isoma.innerHTML = Number(In1.value) + Number(In2.value)" required>
+            
+        </p>
+        <p>
+            <label for="In2">Número 2:</label>
+            <input type="number" name="n2" id="In2" min="0" max="100" step="1" oninput="isoma.innerHTML = Number(In1.value) + Number(In2.value)" required>
+        </p>
+        <p>
+            <label for="isoma">Soma:</label>
+            <output name="soma" id="isoma" for="In1 In2">0</output><!--Tudo isso foi feito com JavaScript para atualizar o valor do output em tempo real quando os inputs mudam. 
+            
+            O output é um elemento que exibe resultados que saem dos inputs, é como se o input fosse um elemento de leitura e o output fosse um elemento de escrita.
+            
+            A função oninput atualiza o valor do output em tempo real quando os inputs mudam. -->
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alguns elementos de formulário</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="">
+        <p> 
+            <label for="Icor">Cor:</label>
+            <input type="color" id="Icor"><!--Este input permite que o usuário escolha uma cor-->
+        </p>
+        <p>
+            <label for="Inivel">Nível de satisfação:</label>
+            <input type="range" name="Satisfaction" id="Inivel" min="0" max="10"><!--Este input permite que o usuário escolha um valor dentro de um intervalo definido pelos atributos min e max.
+            
+            Sem o min e o max ele vai por padrão de 0 a 100.-->
+        </p>
+        <p>
+            <!--Agora iremos ver sobre os inputs de imagem, porém iremos demonstrar somente o file, onde o usuário escolhe um arquivo do computador. No image o usuário não escolhe.-->
+            <label for="Iarquivo">Envie seu arquivo:</label>
+            <input type="file" id="Iarquivo" accept=".pdf, .doc, .docx, .png, .jpg"><!--O accept define quais tipos de arquivos o usuário pode enviar-->
+        </p>
+    </form>
+</body>
+</html>

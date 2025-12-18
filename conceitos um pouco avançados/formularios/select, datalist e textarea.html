@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select, Datalist e Textarea</title>
+</head>
+<body>
+    <h1>Mais alguns elementos de formulário:</h1>
+    <form action="">
+        <p>
+            <label for="Iest">Estado:</label>
+            <select name="Estado" id="Iest">
+                <option value="">Selecione um estado</option>
+                <optgroup label="Região Sudeste">
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                </optgroup><!--O input select cria uma caixa de seleção e as options são as opções contidas nesta caixa.-->
+                <optgroup label="Região Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="PI">Piauí</option>
+                    <option value="CE">Ceará</option>
+                </optgroup><!--O optgroup organiza as opções em grupos dentro do select(Opcional)-->
+            </select>
+        </p>
+        <p>
+            <label for="Icidade">Cidade:</label>
+            <input list="cidades" name="cidade" id="Icidade">
+            <datalist id="cidades">
+                <option value="São Paulo">
+                <option value="Rio de Janeiro">
+                <option value="Belo Horizonte">
+                <option value="Salvador">
+                <option value="Fortaleza">
+            </datalist><!--O input datalist cria uma caixa de seleção que pode ser preenchida com o teclado ou selecionada da lista.
+
+            A grande diferença se dá justamnete na possibilidade do usuário digitar uma entrada diferente da lista.-->
+        </p>
+        <p>
+            <label for="Imsg">Mensagem:</label><br>
+            <textarea name="mensagem" id="Imsg" cols="30" rows="5" placeholder="Digite sua mensagem aqui..."></textarea><!--O input textarea cria uma caixa de texto maior para o usuário digitar mensagens mais longas, é literalmente as caixas de comentários que vemos em sites por ai.
+
+            Os atributos cols e rows definem respectivamente a largura e a altura da caixa de texto.-->
+        </p>
+    </form>
+</body>
+</html>
