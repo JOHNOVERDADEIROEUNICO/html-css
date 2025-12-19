@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+* {
+    margin: 10px;
+    padding: 10px;
+}
+
+html{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+menu{
+    display: none;
+}
+article{
+    width: 100%;
+    font-size: 1.5em;
+    text-align: justify;
+}
+article::after{
+    content: " - Este artigo foi impresso diretamente do meu site de Noticias. Obrigado pela sua visita!";
+
+}
+/*Apertando crtl + p perceba que o estilo e tamnho da fonte está completamente diferente da CSS tela*/

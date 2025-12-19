@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media-Query</title>
+    <link rel="stylesheet" href="tela.css" media="screen">
+    <link rel="stylesheet" href="impressora.css" media="print">
+    <!--Aqui vão estar os nossos media queries.
+    
+    O atributo media dentro da tag <link> serve para dizer em quais tipos de mídia ou condições aquele recurso deve ser aplicado, normalmente arquivos CSS.
+
+    Ele é muito usado para design responsivo e CSS específico por dispositivo.
+    
+    O tipo screen por exemplo, indica que a folh CSS só será aplicada em telas(computador, celular, tablet).
+    
+    No tipo print indica que o estilo será utilizado em impressão da página.
+    
+    Também é possível editar usando Max-width:
+        <link rel="stylesheet" href="mobile.css" media="(max-width: 600px)">
+    Aqui neste caso o CSS só será aplicado em telas pequenas(de até 600px)
+    
+    Também é possível combinar condições:
+        <link rel="stylesheet" href="tablet.css" media="screen and (min-width: 768px)">
+    
+    *Valores comuns do media
+    Tipos de mídia
+
+        1.screen → telas;
+
+        2.print → impressão;
+
+        3.all → todos (padrão);   
+        
+    *Media Queries:
+
+        1.(max-width: 600px);
+
+        2.(min-width: 1024px);
+
+        3.(orientation: landscape);
+
+        (prefers-color-scheme: dark);-->
+</head>
+<body>
+    <header>
+        <h1>Meu site sobre notícias</h1>
+        <menu>
+            <ul>
+                <li>Esportes</li>
+                <li>Politica</li>
+                <li>Tecnologia</li>
+            </ul>
+        </menu><!--A tag <menu> em HTML serve para representar uma lista de comandos ou opções que o usuário pode acionar — algo conceitualmente próximo a um menu de ações, não apenas de navegação.
+            
+        *O que a <menu> representa:
+
+            1.Ela foi criada para descrever conjuntos de ações, como:
+
+            2.menus de contexto
+
+            3.listas de comandos
+
+            4.grupos de botões ou opções funcionais
+
+            5.atalhos de teclado
+
+        Diferente da <nav>, que é semântica de navegação, a <menu> é semântica de comandos.
+            
+        Diferença entre <menu> e <ul>:
+
+        Na prática atual:
+
+        Tag:	 /   Uso semântico:
+        1.<ul>:	Lista genérica de itens;
+        2.<menu>:	Lista de comandos/ações;
+        3.<nav>:	Navegação entre páginas ou seções;
+
+        Visualmente, <menu> e <ul> se comportam quase igual no navegador.
+            
+        Quando usar <menu> hoje?
+
+        Use apenas quando o significado for realmente um conjunto de ações, por exemplo:
+
+            1.botões de controle (play, pause, stop);
+
+            2.menus de ferramentas;
+
+            3.grupos de comandos;
+
+            4.Caso contrário:
+
+                a.navegação → <nav>;
+
+                b.lista comum → <ul>;-->
+    </header>
+    <main>
+        <article>
+            <h2>Estou aprendendo a criar media query</h2>
+            <p>
+                lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Ex
+            </p>
+            <p>
+                lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Ex
+            </p>
+            <p>
+                lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Ex
+            </p>
+            <p>
+                lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Ex
+            </p>
+        </article>
+    </main>
+</body>
+</html>
