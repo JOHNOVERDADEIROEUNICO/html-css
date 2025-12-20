@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/*Terminar as configurações depois a sua maneira.*/
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: lightgray;
+}
+header {
+    background-color: darkslategray;
+}
+header h1{
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+header li{
+    list-style: none;
+}

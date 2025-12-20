@@ -1,7 +1,100 @@
 @charset "UTF-8";
 
-/*Todas as media queries para diferentes dispositivos */
+/*Todas as media queries para diferentes dispositivos 
 
-@media screen {
-    
+    Estes são os breakpoints padrão do Bootstrap 5!*/
+
+/* Mobile first */
+@media (max-width: 480px) {}/* até 480px — celulares pequenos */
+
+@media (min-width: 576px) {/*Nosso site já está compatível com mobiles grandes e pequenos*/}  /* mobile grande */
+
+@media (min-width: 768px) {/* tablet */
+    body{
+        background-image: url(imagens/back-tablet.jpg);
+    }
+    #phone{
+        display: none;
+    }
+    #tablet{
+        display: block;
+    }
+}  
+
+@media (min-width: 992px) {/* laptop *//*Devido a eu não ter uma imagem de laptop, ficou a mesma do pc.*/
+    body{
+        background-image: url(imagens/back-pc.jpg);
+    }
+    #tablet{
+        display: none;
+    }
+    #pc{
+        display: block;
+    }
+
+}  
+
+@media (min-width: 1200px) {/* desktop */
+    body{
+        background-image: url(imagens/back-pc.jpg);
+    }
+    #pc{
+        display: block;
+    }
+} 
+
+@media (min-width: 1400px) {/* telas grandes */
+    body{
+        background-image: url(imagens/back-tv.jpg);
+    }
+    #pc{
+        display: none;
+    }
+    #tv{
+        display: block;
+    }
+} 
+
+@media print {/* impressão */
+    body{
+        background: white;
+    }
+    main h1{
+        font-family: 'Courier New', Courier, monospace;
+        text-shadow: none;
+        color: black;
+
+        width: 100%;
+        margin: 0px;
+        border-radius: 0px;
+        padding: 0px;
+    }
+    #phone, #tablet, #pc, #tv{
+        display: none;
+    }
+    #print{
+        display: block;
+    }
 }
+
+/*⚠️ Importante (regra de ouro)
+
+❌ Não crie breakpoints para cada dispositivo
+✅ Crie breakpoints quando o layout “quebra”
+
+Exemplo:
+
+“Quando o menu não cabe mais em uma linha”
+“Quando os cards ficam espremidos”
+
+🎯 Resumo rápido
+
+📱 ≤ 767px → mobile
+
+📲 768–1023px → tablet
+
+💻 1024–1279px → laptop
+
+🖥️ ≥ 1280px → desktop
+
+🧠 layout > dispositivo*/
