@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/* até 480px — celulares pequenos 
+    📱 ≤ 767px → mobile
+
+    📲 768–1023px → tablet
+
+    💻 1024–1279px → laptop
+
+    🖥️ ≥ 1280px → desktop
+
+    1400px+ → telas grandes
+*/
+@media (max-width: 1024px)  {
+    /* estilos para celulares grandes e pequenos*/
+    menu{
+        display: none;
+    }
+}
+
+@media (min-width: 1024px)  {
+    /* estilos para celulares grandes e pequenos*/
+    #IconSymbol{
+        display: none;
+    }
+    menu{
+        display: block;
+    }
+}

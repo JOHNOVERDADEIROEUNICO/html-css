@@ -1,21 +1,72 @@
 @charset "UTF-8";
-/*Terminar as configurações depois a sua maneira.*/
 
-body, html {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body, html {
     font-family: Arial, sans-serif;
     background-color: lightgray;
 }
 header {
+    padding-top: 3px;
     background-color: darkslategray;
+    
 }
 header h1{
     color: white;
     padding: 20px;
     text-align: center;
+    
 }
-header li{
+
+#IconSymbol{
+    display: block;
+    background-color: rgb(16, 27, 27);
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 5px;
+}
+#IconSymbol:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    transition-duration: 1s;
+    padding: 6px;
+}
+
+header ul{
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+
+}
+header ul > li{
     list-style: none;
+    display: inline;
+    margin: 0 15px;
+    
+}
+header a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition-duration: 1s;
+}
+header a:hover{
+    background-color: rgba(248, 248, 248, 0.518);
+    padding: 5px;
+    border-radius: 5px;
+}
+article{
+    display: block;
+    background-color: white;
+    max-width: 768px;
+    padding: 50px;
+    margin: auto;
+    line-height: 1.6;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    
 }
