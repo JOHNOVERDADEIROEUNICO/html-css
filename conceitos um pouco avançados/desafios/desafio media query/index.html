@@ -1,22 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>desafio do login</title>
     <link rel="stylesheet" href="estilos/all-style.css">
+
+    <link rel="stylesheet" href="estilos/media-queries-style.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
     <main>
-        <section id="Login">
+        <section class="Login">
             <div id="Imagem">
-                Foto
+                
             </div>
             <div id="Formulario">
                 <h1>Login</h1>
                     <p>
                         Seja bem vindo(a) novamente! Por favor, insira suas credenciais para acessar sua conta.
                     </p>
+                    <form action="resposta.html"  method="post">
+                        <label for="E-mail">
+                            <span class="material-icons">person</span>
+
+                            <input type="email" name="" id="E-mail" placeholder="Digite seu email" required><br>
+
+                        </label>
+                        
+
+                        <label for="Senha">
+                            <span class="material-icons">key</span>
+
+                            <input type="password" name="" id="Senha" placeholder="Digite sua senha" minlength="8" required><br>
+                        </label>
+
+                        <button type="submit" id="Entrar">Entrar</button><br>
+
+                        <button type="submit">Esqueci minha senha</button>
+                    </form>
             </div>
         </section>
     </main>

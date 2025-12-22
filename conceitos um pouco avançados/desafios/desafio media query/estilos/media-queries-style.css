@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+/* até 480px — celulares pequenos 
+    📱 ≤ 767px → mobile
+
+    📲 768–1023px → tablet
+
+    💻 1024–1279px → laptop
+
+    🖥️ ≥ 1280px → desktop
+
+    1400px+ → telas grandes
+*/
+
+@media screen and (max-width: 767px) and (min-width: 481px) {
+    .Login{
+        width: 80%;
+        height: 500px;
+    }
+    .Login > #Imagem{
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 150px;
+        border-radius: 10px 10px 0 0;
+    }
+    .Login > #Formulario label{
+        width: 80%;
+        height: 40px;
+    }
+    .Login > #Formulario input{
+        width: 80%;
+        height: 28px;
+    }
+    .Login > #Formulario button{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 1023px) and (min-width: 767px){
+    .Login{
+        width: 85%;
+        height: 400px;
+    }
+    .Login > #Imagem{
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        
+        width: 45%;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+        transform: translateY(-50%);
+    }
+    .Login > #Formulario{
+        width: 45%;
+        float: right;
+    }
+    .Login > #Formulario label{
+        width: 90%;
+        height: 40px;
+    }
+    .Login > #Formulario input{
+        width: 83%;
+        height: 28px;
+    }
+    .Login > #Formulario button{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1280px) and (min-width: 1023px){
+    .Login{
+        width: 85%;
+        height: 400px;
+    }
+    .Login > #Imagem{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        
+        width: 45%;
+        height: 100%;
+        border-radius: 0 10px 10px 0;
+        transform: translate(-100%);
+    }
+    .Login > #Formulario{
+        width: 50%;
+        float: left;
+    }
+    .Login > #Formulario label{
+        width: 95%;
+        height: 40px;
+    }
+    .Login > #Formulario input{
+        width: 89%;
+        height: 28px;
+    }
+    .Login > #Formulario button{
+        width: 95%;
+    }
+}
+@media screen and (min-width: 1281px){
+    .Login{
+        width: 85%;
+        height: 400px;
+    }
+    .Login > #Imagem{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        
+        width: 45%;
+        height: 100%;
+        border-radius: 0 10px 10px 0;
+        transform: translate(-100%);
+    }
+    .Login > #Formulario{
+        width: 50%;
+        float: left;
+    }
+    .Login > #Formulario label{
+        width: 95%;
+        height: 50px;
+    }
+    .Login > #Formulario input{
+        width: 91%;
+        height: 28px;
+    }
+    .Login > #Formulario button{
+        width: 95%;
+        height: 50px;
+    }
+}

@@ -1,1 +1,77 @@
 @charset "UTF-8";
+
+body, main {
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom,  #572264 25%, #04c283);
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+.Login{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+
+    background-color: white;
+    border-radius: 10px;
+}
+.Login > #Imagem{
+        background-image: url(../imagens/pexels-i-trusted-you-656236867-17687682.jpg);
+        background-size: cover;
+        background-position: center;
+        
+    }
+.Login > #Formulario{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+}
+.Login > #Formulario label{
+    display: block;
+    background-color: #572264;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 40px;
+    padding: 1px;
+    border-radius: 5px;
+}
+.Login > #Formulario input{
+    background-color: #40d4a3;
+    border: 1px solid #572264;
+    font-size: 1em;
+    
+    border-radius: 8px;
+    padding: 4px;
+}
+#Formulario input:focus{
+    background-color: rgb(223, 240, 255);
+}
+.Login > #Formulario .material-icons{
+    color: white;
+    vertical-align: middle;
+    padding-left: 4.5px;
+}
+.material-icons:hover{
+    cursor: pointer;
+}
+.Login > #Formulario button{
+    
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border-color: #40d4a3;
+    color: #40d4a3;
+    font-size: 15px;
+}
+#Formulario button:hover{
+    background-color: #40d4a3;
+    color: white;
+    cursor: pointer;
+}
