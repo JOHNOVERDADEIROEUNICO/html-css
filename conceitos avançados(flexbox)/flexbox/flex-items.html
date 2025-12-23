@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        .Container{
+            background-color: lightgray;
+            display: flex;
+            flex-flow: row wrap;
+            height: 300px;
+            align-items: flex-start;
+        }
+        .Item{
+            background-color: cornflowerblue;
+            color: white;
+            border: 1px solid white;
+            text-align: center;
+            padding: 20px;
+        }
+        #D{
+            order: 1;
+        }
+        #E{
+            order: -1;
+            align-self: center;/*O align self é usado para alinhar uma caixa filha específica dentro do container, diferente do align-items que alinha todas as caixas filhas*/
+        }
+        #F{
+            order: 3;
+            align-self: stretch;
+        }
+        /*Parece confuso né? mas não é, no oder ordenamos a posição das caixas filhas dentro do pai, por padrão todas as caixas são 0, quanto maior o numero negativo mais a esquerda irá ficar nossa caixa dentro do container e quanto maior o numero positivo mais a direita irá ficar nossa caixa dentro do container*/
+    </style>
+</head>
+<body>
+    <div class="Container">
+        <div class="Item">A</div>
+        <div class="Item">B</div>
+        <div class="Item">C</div>
+        <div class="Item" id="D">D</div>
+        <div class="Item" id="E">E</div>
+        <div class="Item" id="F">F</div>
+        <div class="Item">G</div>
+    </div>
+</body>
+</html>
