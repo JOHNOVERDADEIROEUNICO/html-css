@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justify Content</title>
+    <style>
+        /*Justify-content trata de alinha os elementos filhos ao longo do eixo principal (main axis) do container flexível. */
+        .Container{
+            background-color: lightseagreen;
+            display: flex;
+            justify-content: flex-start;/*Com o justify-content, os elementos filhos são alinhados ao longo do eixo principal (main axis) do container flexível. flex-start alinha os elementos ao início do eixo principal. (main start*/
+        }
+        .Container2{
+            background-color: lightcoral;
+            display: flex;
+            justify-content: center;/*Alinha ao centro*/
+        }
+        .Container3{
+            background-color: lightcyan;
+            display: flex;
+            justify-content: flex-end;/*Alinha ao final do eixo principal. (main end) */
+        }
+        .Container4{
+            background-color: lightgoldenrodyellow;
+            display: flex;
+            justify-content: space-between;/*Alinha os elementos com espaçamento igual entre eles. */
+        }
+        .Container5{
+            background-color: lightpink;
+            display: flex;
+            justify-content: space-around;/*Alinha os elementos com espaçamento igual ao redor deles. */
+        }
+        .Container6{
+            background-color: lightblue;
+            display: flex;
+            justify-content: space-evenly;/*Alinha os elementos com espaçamento igual entre eles e nas extremidades do container. */
+        }
+        .item{
+            background-color: lightblue;
+            text-align: center;
+            border: 1px solid black;
+        }
+        .item2{
+            background-color: lime;
+            text-align: center;
+            border: 1px solid black;
+        }
+        .item3{
+            background-color: gold;
+            text-align: center;
+            border: 1px solid black;
+        }
+        .item4{
+            background-color: tomato;
+            text-align: center;
+            border: 1px solid black;
+        }
+        .item5{
+            background-color: violet;
+            text-align: center;
+            border: 1px solid black;
+        }
+        .item6{
+            background-color: orange;
+            text-align: center;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="Container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+    </div>
+     <div class="Container2">
+        <div class="item2">Item 1</div>
+        <div class="item2">Item 2</div>
+        <div class="item2">Item 3</div>
+        <div class="item2">Item 4</div>
+        <div class="item2">Item 5</div>
+    </div>
+    <div class="Container3">
+        <div class="item3">Item 1</div>
+        <div class="item3">Item 2</div>
+        <div class="item3">Item 3</div>
+        <div class="item3">Item 4</div>
+        <div class="item3">Item 5</div>
+    </div>
+    <div class="Container4">
+        <div class="item4">Item 1</div>
+        <div class="item4">Item 2</div>
+        <div class="item4">Item 3</div>
+        <div class="item4">Item 4</div>
+        <div class="item4">Item 5</div>
+    </div>
+    <div class="Container5">
+        <div class="item5">Item 1</div>
+        <div class="item5">Item 2</div>
+        <div class="item5">Item 3</div>
+        <div class="item5">Item 4</div>
+        <div class="item5">Item 5</div>
+    </div>
+    <div class="Container6">
+        <div class="item6">Item 1</div>
+        <div class="item6">Item 2</div>
+        <div class="item6">Item 3</div>
+        <div class="item6">Item 4</div>
+        <div class="item6">Item 5</div>
+    </div>
+</body>
+</html>

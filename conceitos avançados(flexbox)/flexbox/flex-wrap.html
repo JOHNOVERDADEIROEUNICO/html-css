@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Wrap</title>
+    <style>
+        .Container{
+            background-color: lightblue;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;/*Perceba que ao diminuir o tamanho do pai, as caixas não quebram, mas sim diminuem junto dele, isto é causado pelo nowrap do flex-wrap.*/
+            width: 100px;
+        }
+        .Container2{
+            background-color: lightcyan;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;/*Perceba que ao diminuir o tamanho do pai, as caixas quebram para a próxima linha, isto é causado pelo wrap do flex-wrap. No wrap comun as caixas quebraram no sentido do cross axis(eixo transversal pra baixo.), se colocarmos um wrap reverse ele quebra pra cima.*/       
+            width: 100px;
+        }
+        .Container3{
+            background-color: lightpink;
+            display: flex;
+            flex-flow: column wrap;/*O flex-flow é uma shorthand para direction e wrap.*/
+            height: 50px;/*Perceba que se a flex box estiver na direção column ele quebra no sentido do cross axis(eixo transversal para direita.), se colocarmos um wrap reverse ele quebra para esquerda.*/        
+        }
+        .Container4{
+            background-color: lightgoldenrodyellow;
+            display: flex;
+            flex-flow: row wrap;     
+            width: 200px;    
+        }
+        .item{
+            background-color: lightcoral;
+            text-align: center;
+            border: 1px solid black;
+        }
+        .item2{
+            background-color: lime;
+            text-align: center;
+            border: 1px solid black;
+        }
+        .item3{
+            background-color: gold;
+            text-align: center;
+            border: 1px solid black;
+        }
+        .item4{
+            background-color: tomato;
+            text-align: center;
+            border: 1px solid black;
+            flex: auto;/*Quando o flex está em auto ao pai ir reduzindo, se o wrap estiver ativo, as caixas se ajustam para manter o conteúdo visível. Ou seja acontece uma quebra de um elemento por vez.*/       
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="Container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+    </div>
+     <div class="Container2">
+        <div class="item2">Item 1</div>
+        <div class="item2">Item 2</div>
+        <div class="item2">Item 3</div>
+        <div class="item2">Item 4</div>
+        <div class="item2">Item 5</div>
+    </div>
+    <div class="Container3">
+        <div class="item3">Item 1</div>
+        <div class="item3">Item 2</div>
+        <div class="item3">Item 3</div>
+        <div class="item3">Item 4</div>
+        <div class="item3">Item 5</div>
+    </div>
+    <div class="Container4">
+        <div class="item4">Item 1</div>
+        <div class="item4">Item 2</div>
+        <div class="item4">Item 3</div>
+        <div class="item4">Item 4</div>
+        <div class="item4">Item 5</div>
+</body>
+</html>

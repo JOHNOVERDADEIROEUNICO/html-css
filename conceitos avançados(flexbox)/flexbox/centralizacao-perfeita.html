@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centralização Perfeita</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .Container{
+            background-color: lightgray;
+            display: flex;
+            justify-content: center;/*Alinha ao centro no eixo principal (main axis)*/
+            align-items: center;/*Alinha ao centro no eixo transversal (cross axis)*/
+            height: 100vh;
+            width: 100vw;
+        }
+        .item{
+            background-color: lightblue;
+            text-align: center;
+            border: 1px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="Container">
+        <div class="item">Item 1</div>
+    </div>
+</body>
+</html>

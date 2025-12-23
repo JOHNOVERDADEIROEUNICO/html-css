@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container{
+            background-color: lightgreen;
+            display: flex;/*Tire este comando e o coloque denovo e perceba a mágica acontecer.*/
+            flex-direction: row;/*Comando que define a direção dos itens dentro do container, podendo ser row (linha) ou column (coluna). Este row é o padrão.*/
+        }
+        .item{
+            background-color: lightseagreen;
+            text-align: center;
+            flex: auto;/*Perceba que ao atiar o auto, as caixas dentro do pai se auto ajustam a extensão do pai.*/
+            /*Perceba que não foi necessário adaptar o tamanho muito menos colocar um margin auto, ele já se auto ajusta a tamanhos de tela.*/
+        }
+        .container2{
+            background-color: lightcoral;
+            display: flex;
+            flex-direction: row-reverse;/*Comando que inverte a direção dos itens dentro do container, podendo ser row-reverse (linha invertida) ou column-reverse (coluna invertida).*/
+        }
+        .item2{
+            background-color: cornflowerblue;
+            text-align: center;
+            flex: auto;
+        }
+        .container3{
+            background-color: lightyellow;
+            display: flex;
+            flex-direction: column;/*Comando que define a direção dos itens dentro do container, podendo ser row (linha) ou column (coluna).*/
+            
+        }
+        .item3{
+            background-color: orange;
+            text-align: center;
+            flex: auto;
+        }
+        .container4{
+            background-color: lightgray;
+            display: flex;
+            flex-direction: column-reverse;/*Comando que inverte a direção dos itens dentro do container, podendo ser row-reverse (linha invertida) ou column-reverse (coluna invertida).*/
+        }
+        .item4{
+            background-color: purple;
+            color: white;
+            text-align: center;
+            flex: auto;
+        }
+        /*Cada caixa possui eixos, vamos a cada um deles:
+            1.Main axis: Eixo principal do flex container, ele possuí dois pontos o main-start e o main-end (onde ele começa e termina) definido pela propriedade flex-direction. Pode ser horizontal (row) ou vertical (column). O main axis pode ser imaginado como o eixo horizontal.;
+            
+            2.Cross axis: Eixo perpendicular(vertical) ao main axis, ele possuí também dois pontos o main start e o main end, definido pela propriedade flex-direction. Pode ser imaginado como o eixo vertical.;
+            
+            3.Quando modifico: quando mudamos no flex-direction a direção das caixas estes dois eixos são invertidos.*/
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    <div class="container2">
+        <div class="item2">Item 1</div>
+        <div class="item2">Item 2</div>
+        <div class="item2">Item 3</div>
+    </div>
+    <div class="container3">
+        <div class="item3">Item 1</div>
+        <div class="item3">Item 2</div>
+        <div class="item3">Item 3</div>
+    </div>
+    <div class="container4">
+        <div class="item4">Item 1</div>
+        <div class="item4">Item 2</div>
+        <div class="item4">Item 3</div>
+    </div>
+</body>
+</html>
