@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais comandos flex</title>
+    <style>
+        /*Flex-Shrink: 1; (pode encolher)(Padrão 1):
+        Quando colocamos 1 dizemos que sim o elemento flex pode encolher, se colocarmos 0 dizemos que não ele não pde encolher;
+        
+        Flex-Grow: 0; (Pode aumentar)(Padrão 0):
+        Aqui segue o mesmo padrão do anterior.(Ou seja estando em 0 por padrão ele não pode aumentar)*/
+        .Container{
+            background-color: aqua;
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .Item{
+            background-color: violet;
+            border: 1px solid black;
+            text-align: center;
+            flex: 0 1 150px;/*O flex é uma shorthand que reune grow, shrink e basis respectivamente.
+            
+            Temos certos valores que simplificam a nossa vida vamos a alguns deles:
+                1.Flex: 0 1 auto;(Padrão);
+
+                2.Flex: initial; (É a mesma coisa de dizer 0 1 auto!);
+                
+                3.Flex: 0 0 auto;(Limita a caixa a só ter o tamnho do conteúdo, padrão mais rígido);
+                
+                4.Flex: none;(É o mesmo que dizer 0 0 auto!);
+                
+                5.Flex: 1 1 auto; (Deixa a caixa flexivel ao maximo!);
+                
+                6.Flex: auto;(É a mesma coisa de dizer 1 1 auto!);*/
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="Container">
+        <div class="Item" >
+            A
+        </div>
+        <div class="Item" >
+            B
+        </div>
+        <div class="Item" >
+            C
+        </div>
+        <div class="Item" >
+            D
+        </div>
+        <div class="Item" >
+            E
+        </div>      
+             
+    </div>
+</body>
+</html

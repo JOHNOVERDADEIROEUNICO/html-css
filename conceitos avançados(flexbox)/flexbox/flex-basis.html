@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-basis</title>
+    <style>
+        /*Flex-basis: auto; ajusta o tamanho do item flexível com base no conteúdo 
+        
+        flex-basis: 100px; define o tamanho inicial do item flexível em 100px independente do conteúdo. OBS: caso não exista espaço para que um item ou mais itens possuam o tamanho estabelecido em px, ele será redimensionado para caber no espaço disponível, se diminuir demais pode ocorrer dele nem se ajustar e ficar fora do bloco pai. */
+        .Container{
+            background-color: lightgray;
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .Item{
+            background-color: cornflowerblue;
+            border: 1px solid navy;
+            text-align: center;
+            flex-basis: auto;
+        }
+         
+    </style>
+</head>
+<body>
+    <div class="Container">
+        <div class="Item">
+            Texto pequeno
+        </div>
+        <div class="Item">
+            Texto um pouco maior que o anterior
+        </div>
+        <div class="Item">
+            C
+        </div>
+        <div class="Item">
+            Texto ainda maior que os tres anterioress
+        </div>
+    </div>
+</body>
+</html>

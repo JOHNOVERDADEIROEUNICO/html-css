@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais comandos flex</title>
+    <style>
+        /*Flex-Shrink: 1; (pode encolher)(Padrão 1):
+        Quando colocamos 1 dizemos que sim o elemento flex pode encolher, se colocarmos 0 dizemos que não ele não pde encolher;
+        
+        Flex-Grow: 0; (Pode aumentar)(Padrão 0):
+        Aqui segue o mesmo padrão do anterior.(Ou seja estando em 0 por padrão ele não pode aumentar)*/
+        .Container{
+            background-color: aqua;
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .Item{
+            background-color: violet;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 250px;
+            flex-shrink: 1;/*Um flex auto meio que segue essa mesma ideia do shrink ativo, porém ele não respeita o wrap, perceba que o shrink respeita também o basis se o wrap estiver ativo*/
+            flex-grow: 1;/*Já o grow uma vez ativo irá quebrar totalmente o basis.(A não ser que o pai tenha um tamanho que limite este crescimento.)*/
+        }
+        .Container2{
+            background-color: aqua;
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .Item2{
+            background-color: violet;
+            border: 1px solid black;
+            text-align: center;
+        }
+        #D0{
+            flex-grow: 0;
+            flex-basis: 250px;
+            flex-shrink: 0;
+        }
+        #D1{
+            flex-grow: 1;
+            flex-basis: 250px;
+            flex-shrink: 1;
+        }
+        #D2{
+            flex-grow: 2;/*Aqui nós temos um caso de proporção, quando colocamos o 2 significa que queremos que ele cresça o dobro do 1, porém ele só funciona se houver 1, se por exemplo tiver somente 0 e 2 ele vai crescer como se fosse o valor um, se houver 1 e 2 ai ele entende que o 2 vale o dobro do crescimento do 1.
+            Além do 2 podemos collocar 3 4 etc, porém ele só vai entender que é pra crescer 4x mais por exemplo se só tiver 1 e 4, se houver um 2 ele quebra esse padrão.*/
+            flex-basis: 250px;
+            flex-shrink: 2;/*O mesmo que foi explicado no grow vale para o shrink*/
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="Container">
+        <div class="Item" >
+            A
+        </div>
+        <div class="Item" >
+            B
+        </div>
+        <div class="Item" >
+            C
+        </div>
+        <div class="Item" >
+            D
+        </div>
+        <div class="Item" >
+            E
+        </div>      
+             
+    </div>
+
+    <br>
+
+    <div class="Container2">
+        <div class="Item2" id="D0">
+            A
+        </div>
+        <div class="Item2" id="D1">
+            B
+        </div>
+        <div class="Item2" id="D2">
+            C
+        </div>
+        <div class="Item2" id="D0">
+            D
+        </div>
+        <div class="Item2" id="D2">
+            E
+        </div>      
+             
+    </div>
+</body>
+</html>
