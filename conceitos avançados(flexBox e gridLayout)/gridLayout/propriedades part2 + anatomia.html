@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades 2</title>
+    <style>
+        /*Assim como no flex-box aqui no grid temos o justify-content e items também o align-content e items, lembrando que justify para largura e align para altura.
+        
+        Antes de seguirmos para o exemplo vamos ver sobre a anatomia de um grid para ficar fácil:
+            1.Grid siginifica grade então, caada item faz parte da grade.;
+            
+            2.O contorno que cerca as grades(extremidades) é chamado de container.;
+            
+            3.Dentro do container estão as grades que são linhas verticais e horizontais que definimos ao criar os items e os ajustar com o column e o row.;
+            
+            4.O espaço entre linhas são os items e as linhas(grades) separam estes items.;
+            
+            5.Grid-Tracks é quando os items estão unidos em uma mesma linha ou coluna (Row-track e Column-track).;
+            
+            6.Toda linha tem uma numeração, começando do 1 e indo até o tanto de linhas estabelecidas, a última linha é -1 e vai diminuindo até chegar na linha 1, ou seja positivo: da esquerda pra direita 1, 2, 3, 4, etc... Negativo: da direita pra esquerda -1, -2, 3, -4, etc...;
+            
+            7.Essa numeração existe tanto para as linhas horizontais quanto as verticais e pode ser vista no inspecionar do google.;*/
+            .container{
+            border: 1px dotted blue;
+            display: grid;
+            height: 250px;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto;
+            gap: 10px;
+            align-items: stretch;/*Posiçaõ do conteúdo do item na vertical.*/
+            align-content: start;/*Posição do item na vertical.*/
+            justify-items: normal;/*Posição do conteúdo do item na horizontal.*/
+            justify-content: normal;/*Posição do item na horizontal.*/
+            }
+            .item{
+                border: 1px dotted red;
+                padding: 5px;
+            }
+    </style>
+</head>
+<body>
+        <main class="container">
+        <div class="item">
+            A
+        </div>
+        <div class="item">
+            B
+        </div>
+        <div class="item">
+            C
+        </div>
+        <div class="item">
+            D
+        </div>
+        <div class="item">
+            E
+        </div>
+        <div class="item">
+            F
+        </div>
+        <div class="item">
+            G
+        </div>
+        <div class="item">
+            H
+        </div>
+        <div class="item">
+            I
+        </div>
+    </main>
+</body>
+</html>

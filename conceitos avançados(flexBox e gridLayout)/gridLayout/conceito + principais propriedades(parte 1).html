@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-Layout na prática</title> 
+    <style>
+        /*CSS gridLayout é um sistema para criação de layout baseado em uma grade bidimensional e otimizado para design de interfaces de usuário.
+        
+        Nesse modelo de contêiner que defina a grade podem ser posicionados livremente em espaços criados na estrutura, quer ela tenha sido definida com suas dimensões flexiveis ou fixas.
+        
+        O gridLayout é conhecido como estrtura bidimencional, enquanto o flexbox é conhecido como unidimensional.
+        
+        Propriedades:
+            1.Display: grid;(Transforma a caixa em um grid-layout).;
+            
+            2.Os elementos dentro da caixa grid sãao chamados de grid-items.;
+            
+            3.grid-template-columns: auto; (aujusta a posição do grid items para que os elementos fiquem em colunas, a cada valor colocado o número de colunas aumenta, ex: auto auto(2 colunas); auto auto auto(3 colunas)).;
+            
+            4.grid-template-rows: 100px;(Funciona da mesma forma do columns, porém define as linhas).;
+            
+            5.gap: 20px;((Antigamente grid-gap, hoje só gap)Cria um espaço entre os grid-items).;*/
+        .container{
+            border: 1px dotted blue;
+            display: grid;/*Perceba que diferente do flex-box o grid ao ser definido nã muda nada diretamente.*/
+            height: 250px;/*Perceba que sem o gri o container cresce sozinho, com o grid os items crescem juntos!*/
+            grid-template-columns: auto auto auto;/*Como foi explicado cada valor define uma nova coluna!*/
+            grid-template-rows: auto auto auto;
+            gap: 5px;
+        }
+        .item{
+            border: 1px dotted red;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="item">
+            A
+        </div>
+        <div class="item">
+            B
+        </div>
+        <div class="item">
+            C
+        </div>
+        <div class="item">
+            D
+        </div>
+        <div class="item">
+            E
+        </div>
+        <div class="item">
+            F
+        </div>
+        <div class="item">
+            G
+        </div>
+        <div class="item">
+            H
+        </div>
+        <div class="item">
+            I
+        </div>
+    </main>
+</body>
+</html>
