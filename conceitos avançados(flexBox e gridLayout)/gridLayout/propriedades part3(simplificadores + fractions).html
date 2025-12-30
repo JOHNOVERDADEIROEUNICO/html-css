@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais propriedades</title>
+    <style>
+        /*Vamos pré supor que tenhamos colunas e linhas adicionadas posteriormente das nossas linhas e colunas pré estabelecidas em html(muito comun alias acontecer quando juntamos back-end(linguagens de progamação) com html)caso isto aconteça nossos grids templates só estão definidos para aquele limite pré estabelecido, ou seja novas linhas e colunas não ficariam com as configurações dos templates para resolver isso existe duas propriedades:
+            1.grid-auto-row: 100px; Define que cada linha nova que for criada independente de quantas sejam terá 100px.;
+            
+            2.grid-auto-column: 100px; Faz o mesmo que o anterior porém com colunas.;
+            
+        Sobre os nossos align e justify temos propriedades que os simplificam também veja:
+            1.place-items: stretch center; Vai confiigurar o align items e o justify items. Primeiro vem o align e depois o justify.;
+            
+            2.place-content: ; Vai configurar o align e o justify content. Primeiro vem o align e depois o justify.;
+            
+        Nosso grid-template-row e grid-template-column também possuem um simplificador:
+            1.grid-template: 100px 100px 100px / auto auto auto; Primeiro vem os valores de linha(row) e depois da barra vem os valores de coluna(column)
+            
+        Perceba que é bem chato ter que ficar colocando 100 100 100, auto auto auto, é possível simplificar usando a função repeat veja:
+            grid-template-rows: repeat(3, auto);
+            grid-template-columns: repeat(3, 100px);
+            grid-template: repeat(3, auto) / repeat(3, 100px);
+        Veja que o primeiro valor é o número de vezes que irá se repetir e o segundo é o valor de estrutura.;
+        
+        Além do auto e do px temos o fr(fraction):
+            grid-template-columns: 1fr 1fr 1fr;
+        Ao colocar esse valores será entendido que você deseja dividir os items em 3 partes iguais dentro da caixa pai. Dica: fraction e auto são bem semelhantes, porém hoje é preferivel usar fraction nu lugar do auto.
+        Se colocarmos:
+            grid-template-columns: 1fr 2fr 1fr;
+        Perceba que temos um dois ali, isso indica que ele terá 2 vezes o tamanho dos outros fractions.;
+        
+        Além do fraction temos também % que dispensa apresentações e todos esse valores podem ser usados juntos(não recomendável)*/
+
+        .container{
+            border: 1px dotted blue;
+            display: grid;
+            height: 250px;
+            grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+            gap: 10px;
+
+            place-items: start center;/*Perceba que ao colocar o fraction ele ignora o place items e content*/
+
+            place-content: space-between end;/*Perceba que ao colocar o fraction ele ignora o place items e content*/
+
+            grid-auto-rows: 1fr;/*Perceba que a linha adicionada só recebe a mesma configuração das outras após o auto-rows, lembrando que o mesmo serve para columns.*/
+        }
+        .item{
+            border: 1px dotted red;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="item">
+            A
+        </div>
+        <div class="item">
+            B
+        </div>
+        <div class="item">
+            C
+        </div>
+        <div class="item">
+            D
+        </div>
+        <div class="item">
+            E
+        </div>
+        <div class="item">
+            F
+        </div>
+        <div class="item">
+            G
+        </div>
+        <div class="item">
+            H
+        </div>
+        <div class="item">
+            I
+        </div>
+       
+    </main>
+</body>
+</html>

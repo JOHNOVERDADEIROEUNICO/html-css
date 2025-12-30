@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-Areas</title>
+    <style>
+        /*Grid areas: Vamos supoer que queiramos criar caixas dentro da caixa pai como diferentes formatos, para isso vamos juntar items para que ele forme este formato, para isso usamos algumas ideias, a primeira é agurpar algumas div items em outra classe, vamos imaginar que queiramos 3 caixas, então vamos ter .caixa1 .caixa2 .caixa3, agora vem as nossas propriedades, vamos usar a caixa 1 como exemplo onde queremos criar uma caixa no formato retângulo, agora é essencial lembrar das linhas numeradas que você pode ver sempre que quiser no inspecionar do google, e outro detalhe nossa grade será de 5 colunas por 4 linhas:
+            grid-row-satrt: 1;
+            grid-row-end: 2;
+        Aqui definimos aonde a caixa vai começar e aonde ele vai terminar em linhass.
+            grid-column-start: 1;
+            grid-column-end: 5;
+        Aqui definimos as colunas.
+        
+        Agora veja o código abaixo e veja como construimos isso, a caixa 1 é retângulo e as 2 e 3 estão logo abaixo em forma quadrada:*/
+        .Container{
+            display: grid;
+            grid-template: repeat(3, 100px) / repeat(4, 1fr);
+            gap: 5px;
+        }
+        .Caixa1{
+            background-color: red;
+            grid-row-start: 1;
+            grid-row-end: 2;/*-3 é a segunda linha, muito comun também*/
+
+            grid-column-start: 1;
+            grid-column-end: 5;/*-1 é a ultima coluna, muito comun também*/
+        }
+        .Caixa2{
+            background-color: green;
+            grid-row-start: 2;
+            grid-row-end: 4;/*-1 é a ultima linha, muito comun também*/
+
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        .Caixa3{
+            background-color: blue;
+            grid-row-start: 2;
+            grid-row-end: 4;
+
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+    </style>
+</head>
+<body>
+    <div class="Container">
+        <div class="Caixa1">
+            Caixa1
+        </div>
+        <div class="Caixa2">
+            Caixa2
+        </div>
+        <div class="Caixa3">
+            Caixa3
+        </div>
+    </div>
+</body>
+</html>
