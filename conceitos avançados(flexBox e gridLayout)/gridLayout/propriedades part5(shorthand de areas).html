@@ -14,7 +14,7 @@
             
             3.grid-column: 1/5; Mesma coisa do row.;
             
-            4.grid-area: 1/1/4/3; Une grid-row e grid-column dentro de uma mesma shorthand!*/
+            4.grid-area: 2/3 / 4/5; Une grid-row e grid-column dentro de uma mesma shorthand! Detalhe primeiro vem row-start e column-start depois row-end e column-end*/
         .Container{
             display: grid;
             grid-template: repeat(3, 100px) / repeat(4, 1fr);
@@ -34,7 +34,7 @@
         }
         .Caixa3{
             background-color: blue;
-            grid-area: 2/4  /  3/5;
+            grid-area: 2/3 / 4/5; /*Une grid-row e grid-column dentro de uma mesma shorthand! Detalhe primeiro vem row-start e column-start depois row-end e column-end*/
         }
     </style>
 </head>
