@@ -98,7 +98,6 @@ main{
 }
 #Detalhes{
   grid-column: 2;
-  
 }
 article{
   background-color: var(--fundo-card);
